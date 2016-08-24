@@ -75,7 +75,7 @@ function loadData() {
 
         for (var i = 0; i < articleList.length; i++) {
             articleStr = articleList[i];
-            var url = 'http://wikipedia.org/wiki/' + articleStr;
+            var url = 'https://wikipedia.org/wiki/' + articleStr;
             $wikiElem.append('<li><a href=" ' + url + ' ">' + articleStr + '</a></li>');
         };
 

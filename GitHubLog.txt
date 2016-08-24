@@ -1,0 +1,969 @@
+2016-08-20 11:45:02.7569|WARN|thread: 1|StandardUserErrors|Showing user error Failed to create a new commit.
+System.ArgumentNullException: Failed Null Check on 'commitModel'
+Parameter name: commitModel
+   at GitHub.Helpers.Ensure.ArgumentNotNull(Object value, String name)
+   at GitHub.ViewModels.CommitViewModel..ctor(IRepositoryModel repository, ICommitModel commitModel, ICommittedFileForklift committedFileForklift, IAvatarProvider avatarProvider, IInlineTextProvider inlineTextProvider)
+   at GitHub.Helpers.CommitCreator.<>c__DisplayClass2.<CreateCommit>b__1(<>f__AnonymousType0`2 x)
+   at System.Reactive.Linq.ObservableImpl.Select`2._.OnNext(TSource value)
+2016-08-20 10:57:26.9272|INFO|thread: 1|CommandLineHandler|Parsing command line arguments:
+2016-08-20 10:57:26.9452|INFO|thread: 1|CommandLineHandler|Unprocessed args: 
+2016-08-20 10:57:26.9512|INFO|thread: 1|AppInstance|Starting up as master instance of GitHub Desktop
+2016-08-20 10:57:26.9512|INFO|thread: 5|StartupLogging| #########################################
+2016-08-20 10:57:26.9512|INFO|thread: 5|StartupLogging| GitHub Desktop started. VERSION: 3.2.0.0
+2016-08-20 10:57:26.9512|INFO|thread: 5|StartupLogging| Build version: 82770ca7379567812d83fa0e6931148f456f1b54
+2016-08-20 10:57:26.9512|INFO|thread: 5|StartupLogging| ***************************************
+2016-08-20 10:57:26.9512|INFO|thread: 5|StartupLogging| ***                                 ***
+2016-08-20 10:57:26.9512|INFO|thread: 5|StartupLogging| ***                                 ***
+2016-08-20 10:57:26.9512|INFO|thread: 5|StartupLogging| ***        Have a problem?          ***
+2016-08-20 10:57:26.9512|INFO|thread: 5|StartupLogging| ***    Email support@github.com     ***
+2016-08-20 10:57:26.9512|INFO|thread: 5|StartupLogging| ***      and include this file      ***
+2016-08-20 10:57:26.9512|INFO|thread: 5|StartupLogging| ***                                 ***
+2016-08-20 10:57:26.9512|INFO|thread: 5|StartupLogging| ***                                 ***
+2016-08-20 10:57:26.9512|INFO|thread: 5|StartupLogging| ***************************************
+2016-08-20 10:57:26.9512|INFO|thread: 5|StartupLogging| OS Version: Windows 10 10.0.10586.0 amd64
+2016-08-20 10:57:26.9512|INFO|thread: 5|StartupLogging| CLR Version: 4.0.30319.42000
+2016-08-20 10:57:26.9512|INFO|thread: 5|StartupLogging| Current culture: en-US
+2016-08-20 10:57:26.9512|INFO|thread: 5|StartupLogging| Environment.CurrentDirectory: C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854
+2016-08-20 10:57:26.9512|INFO|thread: 5|StartupLogging| currentProcess.StartInfo.WorkingDirectory: 
+2016-08-20 10:57:26.9657|INFO|thread: 5|StartupLogging| Terminal Services session: no
+2016-08-20 10:57:26.9657|INFO|thread: 5|StartupLogging| Location: C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854\GitHub.exe
+2016-08-20 10:57:26.9657|INFO|thread: 5|StartupLogging| ActivationUri: https://github-windows.s3.amazonaws.com/GitHub.application
+2016-08-20 10:57:26.9657|INFO|thread: 5|StartupLogging| System.Environment.CommandLine: C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854\GitHub.exe
+2016-08-20 10:57:27.0012|INFO|thread: 1|HardwareRenderingHelper|Your video card appears to support hardware rendering. If this isn't the case and you see glitches
+2016-08-20 10:57:27.0012|INFO|thread: 1|HardwareRenderingHelper|set the GH_FORCE_SW_RENDERING environment variable to 1
+2016-08-20 10:57:27.0012|INFO|thread: 5|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 10:57:27.0127|INFO|thread: 5|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\Program Files\Dell\DW WLAN Card;;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\Skype\Phone\;;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 10:57:27.0127|INFO|thread: 5|StartupLogging| =====================================================
+2016-08-20 10:57:27.0127|INFO|thread: 5|StartupLogging|  DIAGNOSTICS                                        |
+2016-08-20 10:57:27.0127|INFO|thread: 5|StartupLogging| =====================================================
+2016-08-20 10:57:27.0127|INFO|thread: 5|StartupLogging| Git Extracted: 'True:
+2016-08-20 10:57:27.0127|INFO|thread: 5|StartupLogging| PortableGit Dir Exists: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8'
+2016-08-20 10:57:27.0127|INFO|thread: 5|StartupLogging| Git Executable Exists: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe'
+2016-08-20 10:57:27.0127|INFO|thread: 5|StartupLogging| ----------------------------------------------------
+2016-08-20 10:57:27.0127|INFO|thread: 5|StartupLogging| PATH: C:\Program Files\Dell\DW WLAN Card;;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\Skype\Phone\;
+2016-08-20 10:57:27.0392|INFO|thread: 5|StartupLogger|Proxy information: (None)
+2016-08-20 10:57:27.0392|INFO|thread: 5|StartupLogger|Couldn't fetch creds for proxy
+2016-08-20 10:57:27.0392|INFO|thread: 1|App|Checking whether application is network deployed: True
+2016-08-20 10:57:27.0392|INFO|thread: 1|App|Shortcut C:\Users\Johanna\AppData\Local\GitHub\GitHub.appref-ms exists? True
+2016-08-20 10:57:27.0803|INFO|thread: 1|ClickOnceAppIconHelper|Updating registry with our application icon 'C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854\Images\App.ico'
+2016-08-20 10:57:27.6612|INFO|thread: 5|PortablePackageManager|Already extracted PortableGit.7z, returning 100%
+2016-08-20 10:57:27.7552|INFO|thread: 5|MsysGitCertificateInstaller|Found certificate cache, loaded 156 certificates
+2016-08-20 10:57:27.7633|INFO|thread: 5|MsysGitCertificateInstaller|Created certificate bundle with 185 entries
+2016-08-20 10:57:27.8058|INFO|thread: 5|StartupSequence|Took 159ms to Update certificate bundle from system store
+2016-08-20 10:57:28.6490|INFO|thread: 1|CommandLineToolsExtractor|Portable Git and Git LFS are already extracted
+2016-08-20 10:57:28.6545|INFO|thread: 1|GitClient|Installing git lfs filters
+2016-08-20 10:57:28.6740|INFO|thread: 1|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 10:57:28.6740|INFO|thread: 1|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 10:57:28.6890|INFO|thread: 1|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'lfs install --force ', Working Directory: C:\Users\Johanna\AppData\Local\Temp\
+2016-08-20 10:57:28.7028|INFO|thread: 1|ReactiveScreen|Activating GitHub.ViewModels.ShellViewModel.
+2016-08-20 10:57:28.7028|INFO|thread: 1|ReactiveScreen|Activating GitHub.ViewModels.DashboardViewModel.
+2016-08-20 10:57:29.4996|INFO|thread: 1|PortablePackageManager|Already extracted gitignore.7z, returning 100%
+2016-08-20 10:57:29.8952|WARN|thread: 5|LoginCache|Could not get login for host 'GitHub.HostAddress'
+System.Collections.Generic.KeyNotFoundException: The given key 'login:null' was not present in the cache.
+2016-08-20 10:57:30.3582|INFO|thread: 1|RepositoryHost|Log in from cache for login 'JA812' to host 'https://api.github.com/' SUCCEEDED
+2016-08-20 10:57:30.3927|INFO|thread:25|ApplicationShellInitializer|Running post login tasks. ~/.gitconfig is set up with user.name = 'Johanna' and user.email = 'johanna.asmuss@gmail.com'
+2016-08-20 10:57:30.3927|INFO|thread:25|SshKeyHelper|Found existing SSH key pair
+2016-08-20 10:57:30.5819|INFO|thread:13|SshKeyHelper|ssh-agent already running
+2016-08-20 10:57:30.5819|INFO|thread:13|PortablePackageManager|Already extracted lfs-amd64.7z, returning 100%
+2016-08-20 10:57:30.5954|INFO|thread:13|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 10:57:30.5954|INFO|thread:13|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 10:57:30.5954|INFO|thread:13|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin\ssh-add.exe', Args: '"C:\Users\Johanna\.ssh\github_rsa"', Working Directory: C:\Users\Johanna\AppData\Local\Temp\
+2016-08-20 10:57:37.1441|INFO|thread:13|SoftwareUpdateViewModel|Checking for new version
+2016-08-20 10:58:03.2171|INFO|thread: 1|DashboardViewModel|Received request to clone: 'https://github.com/JA812/JA812.github.io.git'
+2016-08-20 10:58:19.5274|INFO|thread: 1|RepositoryModel|Cloning repo https://github.com/JA812/JA812.github.io.git
+2016-08-20 10:58:19.5464|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 1 at RepositoryModel.cs:1442
+2016-08-20 10:58:19.5464|INFO|thread:16|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 1 at RepositoryModel.cs:1442 after waiting 0.001358s
+2016-08-20 10:58:19.5833|INFO|thread:14|DashboardViewModel|Selected repository 'JA812/JA812.github.io'
+2016-08-20 10:58:19.5953|INFO|thread:13|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 2 at GitClient.cs:588
+2016-08-20 10:58:19.5953|INFO|thread: 8|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 2 at GitClient.cs:588 after waiting 0.0009993s
+2016-08-20 10:58:19.5953|INFO|thread:13|AsyncReaderWriterLock|Released concurrent scheduler for operation: 1 at RepositoryModel.cs:1442 after blocking 0.0507469s
+2016-08-20 10:58:19.6098|INFO|thread:16|AsyncReaderWriterLock|Released concurrent scheduler for operation: 2 at GitClient.cs:588 after blocking 0.01336s
+2016-08-20 10:58:19.6303|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 3 at GitClient.cs:600
+2016-08-20 10:58:19.6303|INFO|thread:13|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 3 at GitClient.cs:600 after waiting 6.95E-05s
+2016-08-20 10:58:19.6483|INFO|thread: 4|AsyncReaderWriterLock|Released concurrent scheduler for operation: 3 at GitClient.cs:600 after blocking 0.0176334s
+2016-08-20 10:58:19.7014|INFO|thread: 1|DashboardViewModel|Selected repository 'JA812/JA812.github.io'
+2016-08-20 10:58:19.7014|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 4 at GitClient.cs:605
+2016-08-20 10:58:19.7014|INFO|thread:28|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 4 at GitClient.cs:605 after waiting 2.61E-05s
+2016-08-20 10:58:19.7014|INFO|thread: 1|AsyncReaderWriterLock|Acquiring exclusive scheduler for operation 5 at GitClient.cs:583
+2016-08-20 10:58:19.7194|INFO|thread:13|AsyncReaderWriterLock|Released concurrent scheduler for operation: 4 at GitClient.cs:605 after blocking 0.0093978s
+2016-08-20 10:58:19.7194|INFO|thread:28|AsyncReaderWriterLock|Acquired exclusive scheduler for operation: 5 at GitClient.cs:583 after waiting 0.0081428s
+2016-08-20 10:58:20.1543|INFO|thread:28|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 6 at GitClient.cs:600
+2016-08-20 10:58:20.1543|INFO|thread:14|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 7 at GitClient.cs:600
+2016-08-20 10:58:20.2989|INFO|thread:28|DashboardViewModel|Took 590ms to Create RepositoryViewModel for location C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io
+2016-08-20 10:58:20.2989|INFO|thread:14|DashboardViewModel|Took 0ms to Create RepositoryViewModel for location C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io
+2016-08-20 10:58:20.2989|INFO|thread:28|AsyncReaderWriterLock|Released exclusive scheduler for operation: 5 at GitClient.cs:583 after blocking 0.5780383s
+2016-08-20 10:58:20.2989|INFO|thread:16|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 6 at GitClient.cs:600 after waiting 0.1450148s
+2016-08-20 10:58:20.2989|INFO|thread: 8|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 7 at GitClient.cs:600 after waiting 0.1449957s
+2016-08-20 10:58:20.3349|INFO|thread:16|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 8 at RepositoryViewModel.cs:319
+2016-08-20 10:58:20.3349|INFO|thread: 8|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 9 at RepositoryViewModel.cs:319
+2016-08-20 10:58:20.3349|INFO|thread:13|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 8 at RepositoryViewModel.cs:319 after waiting 0.001644s
+2016-08-20 10:58:20.3349|INFO|thread:16|AsyncReaderWriterLock|Released concurrent scheduler for operation: 6 at GitClient.cs:600 after blocking 0.0378343s
+2016-08-20 10:58:20.3349|INFO|thread: 8|AsyncReaderWriterLock|Released concurrent scheduler for operation: 7 at GitClient.cs:600 after blocking 0.0378697s
+2016-08-20 10:58:20.3349|INFO|thread:28|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 9 at RepositoryViewModel.cs:319 after waiting 0.0023387s
+2016-08-20 10:58:20.3819|WARN|thread: 8|GetBranch`1|Could not resolve branch origin/master
+2016-08-20 10:58:20.3819|WARN|thread:16|GetBranch`1|Could not resolve branch origin/master
+2016-08-20 10:58:20.3999|INFO|thread:16|AsyncReaderWriterLock|Released concurrent scheduler for operation: 8 at RepositoryViewModel.cs:319 after blocking 0.0626897s
+2016-08-20 10:58:20.3999|INFO|thread: 8|AsyncReaderWriterLock|Released concurrent scheduler for operation: 9 at RepositoryViewModel.cs:319 after blocking 0.0620594s
+2016-08-20 10:58:20.5345|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 10 at GitClient.cs:195
+2016-08-20 10:58:20.5345|INFO|thread:28|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 10 at GitClient.cs:195 after waiting 6.57E-05s
+2016-08-20 10:58:20.5345|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 11 at RepositoryModel.cs:596
+2016-08-20 10:58:20.5345|INFO|thread: 8|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 11 at RepositoryModel.cs:596 after waiting 7.18E-05s
+2016-08-20 10:58:20.5536|INFO|thread:16|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 12 at RepositoryModel.cs:596
+2016-08-20 10:58:20.5536|INFO|thread:13|AsyncReaderWriterLock|Released concurrent scheduler for operation: 10 at GitClient.cs:195 after blocking 0.0246548s
+2016-08-20 10:58:20.5536|INFO|thread:28|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 12 at RepositoryModel.cs:596 after waiting 0.0055965s
+2016-08-20 10:58:20.5736|INFO|thread: 4|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 13 at GitClient.cs:267
+2016-08-20 10:58:20.5736|INFO|thread: 4|AsyncReaderWriterLock|Released concurrent scheduler for operation: 11 at RepositoryModel.cs:596 after blocking 0.0390892s
+2016-08-20 10:58:20.5736|INFO|thread: 8|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 13 at GitClient.cs:267 after waiting 0.0006909s
+2016-08-20 10:58:20.5736|INFO|thread:13|AsyncReaderWriterLock|Released concurrent scheduler for operation: 12 at RepositoryModel.cs:596 after blocking 0.0155275s
+2016-08-20 10:58:20.5871|INFO|thread: 4|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 10:58:20.5871|INFO|thread: 4|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 10:58:20.5871|INFO|thread: 4|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'status --untracked-files=all --porcelain -z ', Working Directory: C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io\
+2016-08-20 10:58:20.7202|INFO|thread:16|BackgroundFetcher|Got a refresh period for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io\.git of 300 seconds
+2016-08-20 10:58:20.7202|INFO|thread:16|BackgroundFetcher|Added a delay for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io\.git of 26475 milliseconds
+2016-08-20 10:58:20.7202|INFO|thread: 4|ConcurrentRepositoryConnection|Took 111ms to git status
+2016-08-20 10:58:20.7202|INFO|thread: 4|ConcurrentRepositoryConnection|Took 112ms to git status and parse output
+2016-08-20 10:58:20.7332|INFO|thread: 4|NewCommitViewModel|Took 159ms to load files for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io
+2016-08-20 10:58:20.7332|INFO|thread: 4|AsyncReaderWriterLock|Released concurrent scheduler for operation: 13 at GitClient.cs:267 after blocking 0.1589431s
+2016-08-20 10:58:20.9649|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 14 at GitClient.cs:588
+2016-08-20 10:58:20.9649|INFO|thread: 4|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 14 at GitClient.cs:588 after waiting 3.49E-05s
+2016-08-20 10:58:20.9729|INFO|thread:16|AsyncReaderWriterLock|Released concurrent scheduler for operation: 14 at GitClient.cs:588 after blocking 0.0076604s
+2016-08-20 10:58:21.5258|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 15 at GitClient.cs:600
+2016-08-20 10:58:21.5258|INFO|thread: 8|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 15 at GitClient.cs:600 after waiting 3.96E-05s
+2016-08-20 10:58:21.5368|INFO|thread: 4|AsyncReaderWriterLock|Released concurrent scheduler for operation: 15 at GitClient.cs:600 after blocking 0.0109023s
+2016-08-20 10:58:21.5439|INFO|thread: 1|NewCommitViewModel|Took 810ms to render file list for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io
+2016-08-20 10:58:21.5439|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 16 at RepositoryViewModel.cs:319
+2016-08-20 10:58:21.5439|INFO|thread: 8|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 16 at RepositoryViewModel.cs:319 after waiting 4.71E-05s
+2016-08-20 10:58:21.5439|INFO|thread: 1|AsyncReaderWriterLock|Released concurrent scheduler for operation: 16 at RepositoryViewModel.cs:319 after blocking 2.42E-05s
+2016-08-20 10:58:21.5439|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 17 at RepositoryViewModel.cs:319
+2016-08-20 10:58:21.5439|INFO|thread: 8|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 17 at RepositoryViewModel.cs:319 after waiting 2.05E-05s
+2016-08-20 10:58:21.5439|WARN|thread:28|GetBranch`1|Could not resolve branch origin/master
+2016-08-20 10:58:21.5439|WARN|thread:16|GetBranch`1|Could not resolve branch origin/master
+2016-08-20 10:58:21.5439|INFO|thread:28|AsyncReaderWriterLock|Released concurrent scheduler for operation: 17 at RepositoryViewModel.cs:319 after blocking 0.0112135s
+2016-08-20 10:58:38.0616|INFO|thread: 1|RepositoryHost|Log in from cache for login 'JA812' to host 'https://api.github.com/' SUCCEEDED
+2016-08-20 10:58:38.0616|ERROR|thread: 1|BranchSynchronizer|Branch was not updated before refresh was called
+2016-08-20 10:58:56.2853|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 18 at GitClient.cs:195
+2016-08-20 10:58:56.2853|INFO|thread:29|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 18 at GitClient.cs:195 after waiting 4.05E-05s
+2016-08-20 10:58:56.2853|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 19 at RepositoryModel.cs:596
+2016-08-20 10:58:56.2853|INFO|thread:13|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 19 at RepositoryModel.cs:596 after waiting 0.0024926s
+2016-08-20 10:58:56.2964|INFO|thread:13|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 20 at GitClient.cs:267
+2016-08-20 10:58:56.2964|INFO|thread:30|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 20 at GitClient.cs:267 after waiting 4.61E-05s
+2016-08-20 10:58:56.2964|INFO|thread:13|AsyncReaderWriterLock|Released concurrent scheduler for operation: 19 at RepositoryModel.cs:596 after blocking 0.007813s
+2016-08-20 10:58:56.2964|INFO|thread: 4|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 10:58:56.2964|INFO|thread: 4|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 10:58:56.2964|INFO|thread: 4|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'status --untracked-files=all --porcelain -z ', Working Directory: C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io\
+2016-08-20 10:58:56.3271|INFO|thread:28|AsyncReaderWriterLock|Released concurrent scheduler for operation: 18 at GitClient.cs:195 after blocking 0.0414401s
+2016-08-20 10:58:56.4412|INFO|thread: 4|ConcurrentRepositoryConnection|Took 113ms to git status
+2016-08-20 10:58:56.4412|INFO|thread: 4|ConcurrentRepositoryConnection|Took 113ms to git status and parse output
+2016-08-20 10:58:56.4412|INFO|thread: 4|NewCommitViewModel|Took 145ms to load files for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io
+2016-08-20 10:58:56.4412|INFO|thread: 4|AsyncReaderWriterLock|Released concurrent scheduler for operation: 20 at GitClient.cs:267 after blocking 0.1451846s
+2016-08-20 10:58:56.4412|INFO|thread: 1|NewCommitViewModel|Took 0ms to render file list for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io
+2016-08-20 10:58:56.4412|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 21 at RepositoryViewModel.cs:319
+2016-08-20 10:58:56.4412|INFO|thread:29|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 21 at RepositoryViewModel.cs:319 after waiting 2.61E-05s
+2016-08-20 10:58:56.4542|WARN|thread: 8|GetBranch`1|Could not resolve branch origin/master
+2016-08-20 10:58:56.4542|INFO|thread: 8|AsyncReaderWriterLock|Released concurrent scheduler for operation: 21 at RepositoryViewModel.cs:319 after blocking 0.0115196s
+2016-08-20 10:59:17.1084|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 22 at RepositoryModel.cs:1442
+2016-08-20 10:59:17.1084|INFO|thread:24|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 22 at RepositoryModel.cs:1442 after waiting 4.38E-05s
+2016-08-20 10:59:17.1084|INFO|thread:28|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 23 at GitClient.cs:588
+2016-08-20 10:59:17.1084|INFO|thread: 4|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 23 at GitClient.cs:588 after waiting 4.52E-05s
+2016-08-20 10:59:17.1084|INFO|thread:28|AsyncReaderWriterLock|Released concurrent scheduler for operation: 22 at RepositoryModel.cs:1442 after blocking 0.0099464s
+2016-08-20 10:59:17.1234|INFO|thread:30|AsyncReaderWriterLock|Released concurrent scheduler for operation: 23 at GitClient.cs:588 after blocking 0.0048729s
+2016-08-20 10:59:17.1234|INFO|thread:14|DashboardViewModel|Selected repository 'JA812/Pizza-Performance'
+2016-08-20 10:59:17.1234|INFO|thread:14|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 24 at GitClient.cs:605
+2016-08-20 10:59:17.1234|INFO|thread:24|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 24 at GitClient.cs:605 after waiting 0.0035936s
+2016-08-20 10:59:17.1234|INFO|thread:14|AsyncReaderWriterLock|Acquiring exclusive scheduler for operation 25 at GitClient.cs:583
+2016-08-20 10:59:17.1414|INFO|thread:13|AsyncReaderWriterLock|Released concurrent scheduler for operation: 24 at GitClient.cs:605 after blocking 0.0053007s
+2016-08-20 10:59:17.1414|INFO|thread:24|AsyncReaderWriterLock|Acquired exclusive scheduler for operation: 25 at GitClient.cs:583 after waiting 0.0052018s
+2016-08-20 10:59:17.2620|INFO|thread:24|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 26 at GitClient.cs:600
+2016-08-20 10:59:17.2831|INFO|thread:24|DashboardViewModel|Took 150ms to Create RepositoryViewModel for location C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views
+2016-08-20 10:59:17.2831|INFO|thread:24|AsyncReaderWriterLock|Released exclusive scheduler for operation: 25 at GitClient.cs:583 after blocking 0.141875s
+2016-08-20 10:59:17.2831|INFO|thread:24|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 26 at GitClient.cs:600 after waiting 0.0215197s
+2016-08-20 10:59:17.2831|INFO|thread:24|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 27 at RepositoryViewModel.cs:319
+2016-08-20 10:59:17.2831|INFO|thread: 4|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 27 at RepositoryViewModel.cs:319 after waiting 3.12E-05s
+2016-08-20 10:59:17.2831|INFO|thread:24|AsyncReaderWriterLock|Released concurrent scheduler for operation: 26 at GitClient.cs:600 after blocking 0.0066564s
+2016-08-20 10:59:17.3361|INFO|thread: 8|AsyncReaderWriterLock|Released concurrent scheduler for operation: 27 at RepositoryViewModel.cs:319 after blocking 0.0464306s
+2016-08-20 10:59:17.3621|INFO|thread: 4|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 28 at GitClient.cs:195
+2016-08-20 10:59:17.3621|INFO|thread:24|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 28 at GitClient.cs:195 after waiting 2.05E-05s
+2016-08-20 10:59:17.3621|INFO|thread: 4|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 29 at RepositoryModel.cs:596
+2016-08-20 10:59:17.3621|INFO|thread:13|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 29 at RepositoryModel.cs:596 after waiting 1.16E-05s
+2016-08-20 10:59:17.3621|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 30 at RepositoryModel.cs:596
+2016-08-20 10:59:17.3902|INFO|thread: 4|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 31 at NewPullRequestViewModel.cs:245
+2016-08-20 10:59:17.3902|INFO|thread: 4|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 32 at GitClient.cs:267
+2016-08-20 10:59:17.3902|INFO|thread: 4|AsyncReaderWriterLock|Released concurrent scheduler for operation: 29 at RepositoryModel.cs:596 after blocking 0.0301766s
+2016-08-20 10:59:17.3902|INFO|thread:13|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 30 at RepositoryModel.cs:596 after waiting 0.0300647s
+2016-08-20 10:59:17.3902|INFO|thread: 4|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 31 at NewPullRequestViewModel.cs:245 after waiting 0.0059076s
+2016-08-20 10:59:17.3902|INFO|thread: 8|AsyncReaderWriterLock|Released concurrent scheduler for operation: 28 at GitClient.cs:195 after blocking 0.0365569s
+2016-08-20 10:59:17.3902|INFO|thread:24|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 32 at GitClient.cs:267 after waiting 0.0062911s
+2016-08-20 10:59:17.4142|INFO|thread:24|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 10:59:17.4142|INFO|thread:24|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 10:59:17.4142|INFO|thread:24|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'status --untracked-files=all --porcelain -z ', Working Directory: C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\
+2016-08-20 10:59:17.4142|INFO|thread: 8|AsyncReaderWriterLock|Released concurrent scheduler for operation: 30 at RepositoryModel.cs:596 after blocking 0.0240469s
+2016-08-20 10:59:17.4472|INFO|thread: 4|AsyncReaderWriterLock|Released concurrent scheduler for operation: 31 at NewPullRequestViewModel.cs:245 after blocking 0.051164s
+2016-08-20 10:59:17.5363|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 33 at GitClient.cs:588
+2016-08-20 10:59:17.5643|INFO|thread:13|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 33 at GitClient.cs:588 after waiting 0.0278384s
+2016-08-20 10:59:17.5643|INFO|thread: 4|ConcurrentRepositoryConnection|Took 134ms to git status
+2016-08-20 10:59:17.5643|INFO|thread: 4|ConcurrentRepositoryConnection|Took 134ms to git status and parse output
+2016-08-20 10:59:17.5643|INFO|thread: 8|AsyncReaderWriterLock|Released concurrent scheduler for operation: 33 at GitClient.cs:588 after blocking 0.0083247s
+2016-08-20 10:59:17.5963|INFO|thread: 4|NewCommitViewModel|Took 204ms to load files for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views
+2016-08-20 10:59:17.5963|INFO|thread: 4|AsyncReaderWriterLock|Released concurrent scheduler for operation: 32 at GitClient.cs:267 after blocking 0.1978467s
+2016-08-20 10:59:17.6899|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 34 at BranchesViewModel.cs:356
+2016-08-20 10:59:17.6899|INFO|thread:24|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 34 at BranchesViewModel.cs:356 after waiting 0.0001105s
+2016-08-20 10:59:17.6899|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 35 at RepositoryViewModel.cs:319
+2016-08-20 10:59:17.6899|INFO|thread: 4|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 35 at RepositoryViewModel.cs:319 after waiting 2.75E-05s
+2016-08-20 10:59:17.7294|INFO|thread:13|AsyncReaderWriterLock|Released concurrent scheduler for operation: 34 at BranchesViewModel.cs:356 after blocking 0.0392637s
+2016-08-20 10:59:17.7530|INFO|thread: 1|NewCommitViewModel|Took 156ms to render file list for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views
+2016-08-20 10:59:17.7530|INFO|thread: 1|AsyncReaderWriterLock|Released concurrent scheduler for operation: 35 at RepositoryViewModel.cs:319 after blocking 0.0635117s
+2016-08-20 10:59:17.7530|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 36 at RepositoryViewModel.cs:319
+2016-08-20 10:59:17.7530|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 37 at RepositoryViewModel.cs:319
+2016-08-20 10:59:17.7530|INFO|thread:24|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 36 at RepositoryViewModel.cs:319 after waiting 0.0001786s
+2016-08-20 10:59:17.7530|INFO|thread:24|AsyncReaderWriterLock|Released concurrent scheduler for operation: 36 at RepositoryViewModel.cs:319 after blocking 5.1E-06s
+2016-08-20 10:59:17.7530|INFO|thread:24|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 37 at RepositoryViewModel.cs:319 after waiting 7.65E-05s
+2016-08-20 10:59:17.8520|INFO|thread: 4|AsyncReaderWriterLock|Released concurrent scheduler for operation: 37 at RepositoryViewModel.cs:319 after blocking 0.0966145s
+2016-08-20 10:59:18.2055|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 38 at GitClient.cs:381
+2016-08-20 10:59:18.2055|INFO|thread:13|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 38 at GitClient.cs:381 after waiting 0.0001063s
+2016-08-20 10:59:18.2286|INFO|thread:24|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 10:59:18.2286|INFO|thread:24|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 10:59:18.2286|INFO|thread:24|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'diff-tree -r -z --no-renames --name-status 4b825dc642cb6eb9a060e54bf8d69288fbee4904 4e007610d905bd04d2779c5eed42baf4882da8d9 ', Working Directory: C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\
+2016-08-20 10:59:18.3211|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 39 at ICommittedFileForklift.cs:95
+2016-08-20 10:59:18.3211|INFO|thread:24|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 39 at ICommittedFileForklift.cs:95 after waiting 0.0012125s
+2016-08-20 10:59:18.3688|INFO|thread:30|AsyncReaderWriterLock|Released concurrent scheduler for operation: 39 at ICommittedFileForklift.cs:95 after blocking 0.0454677s
+2016-08-20 10:59:18.3848|INFO|thread:29|AsyncReaderWriterLock|Released concurrent scheduler for operation: 38 at GitClient.cs:381 after blocking 0.179018s
+2016-08-20 10:59:19.2895|INFO|thread: 1|SelectedCommitViewModel|Took 1095ms to load files for commit a993e12 in repo C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views
+2016-08-20 10:59:24.4728|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 40 at GitClient.cs:600
+2016-08-20 10:59:24.4728|INFO|thread:24|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 40 at GitClient.cs:600 after waiting 2.79E-05s
+2016-08-20 10:59:24.4819|INFO|thread: 8|AsyncReaderWriterLock|Released concurrent scheduler for operation: 40 at GitClient.cs:600 after blocking 0.0083238s
+2016-08-20 10:59:24.6927|INFO|thread: 1|RepositoryHost|Log in from cache for login 'JA812' to host 'https://api.github.com/' SUCCEEDED
+2016-08-20 10:59:24.6927|INFO|thread: 1|AsyncReaderWriterLock|Acquiring exclusive scheduler for operation 41 at BranchSynchronizer.cs:220
+2016-08-20 10:59:24.6927|INFO|thread:26|AsyncReaderWriterLock|Acquired exclusive scheduler for operation: 41 at BranchSynchronizer.cs:220 after waiting 0.0001203s
+2016-08-20 10:59:24.7317|INFO|thread:28|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 10:59:24.7317|INFO|thread:28|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 10:59:24.7317|INFO|thread:28|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'pull --progress --rebase --prune origin master ', Working Directory: C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\
+2016-08-20 10:59:27.6391|INFO|thread:20|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 42 at RepositoryModel.cs:596
+2016-08-20 10:59:27.6391|INFO|thread:21|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 43 at GitClient.cs:267
+2016-08-20 10:59:27.6391|INFO|thread: 4|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 43 at GitClient.cs:267 after waiting 0.0010077s
+2016-08-20 10:59:27.6391|INFO|thread:24|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 42 at RepositoryModel.cs:596 after waiting 0.0016095s
+2016-08-20 10:59:27.6391|INFO|thread: 8|AsyncReaderWriterLock|Released exclusive scheduler for operation: 41 at BranchSynchronizer.cs:220 after blocking 2.9435053s
+2016-08-20 10:59:27.6541|INFO|thread:24|AsyncReaderWriterLock|Released concurrent scheduler for operation: 42 at RepositoryModel.cs:596 after blocking 0.0130134s
+2016-08-20 10:59:27.6541|INFO|thread: 4|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 10:59:27.6541|INFO|thread: 4|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 10:59:27.6541|INFO|thread: 4|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'status --untracked-files=all --porcelain -z ', Working Directory: C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\
+2016-08-20 10:59:27.6946|WARN|thread: 1|StandardUserErrors|Showing user error https://github.com/JA812/Pizza-Performance.git/ doesn’t seem to exist anymore. You may not have access, or it may have been deleted or renamed.
+GitHub.IO.ProcessException: remote: Repository not found.
+fatal: repository 'https://github.com/JA812/Pizza-Performance.git/' not found
+2016-08-20 10:59:27.7852|INFO|thread:30|ConcurrentRepositoryConnection|Took 114ms to git status
+2016-08-20 10:59:27.7852|INFO|thread:30|ConcurrentRepositoryConnection|Took 114ms to git status and parse output
+2016-08-20 10:59:27.7977|INFO|thread:30|NewCommitViewModel|Took 157ms to load files for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views
+2016-08-20 10:59:27.7977|INFO|thread:30|AsyncReaderWriterLock|Released concurrent scheduler for operation: 43 at GitClient.cs:267 after blocking 0.1565171s
+2016-08-20 10:59:27.7977|INFO|thread: 1|NewCommitViewModel|Took 8ms to render file list for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views
+2016-08-20 10:59:32.9172|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 44 at GitClient.cs:267
+2016-08-20 10:59:32.9172|INFO|thread:30|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 44 at GitClient.cs:267 after waiting 3.03E-05s
+2016-08-20 10:59:32.9332|INFO|thread:19|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 10:59:32.9332|INFO|thread:19|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 10:59:32.9332|INFO|thread:19|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'status --untracked-files=all --porcelain -z ', Working Directory: C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\
+2016-08-20 10:59:33.0485|INFO|thread:13|ConcurrentRepositoryConnection|Took 97ms to git status
+2016-08-20 10:59:33.0485|INFO|thread:13|ConcurrentRepositoryConnection|Took 97ms to git status and parse output
+2016-08-20 10:59:33.0485|INFO|thread:13|NewCommitViewModel|Took 139ms to load files for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views
+2016-08-20 10:59:33.0485|INFO|thread:13|AsyncReaderWriterLock|Released concurrent scheduler for operation: 44 at GitClient.cs:267 after blocking 0.1394589s
+2016-08-20 10:59:33.0706|INFO|thread: 1|NewCommitViewModel|Took 14ms to render file list for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views
+2016-08-20 10:59:33.0706|INFO|thread: 1|BranchSynchronizer|Completing sync for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views - master
+2016-08-20 10:59:33.0706|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 45 at RepositoryViewModel.cs:319
+2016-08-20 10:59:33.0706|INFO|thread: 4|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 45 at RepositoryViewModel.cs:319 after waiting 4.38E-05s
+2016-08-20 10:59:33.0706|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 46 at GitClient.cs:195
+2016-08-20 10:59:33.0706|INFO|thread: 8|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 46 at GitClient.cs:195 after waiting 2.09E-05s
+2016-08-20 10:59:33.0706|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 47 at RepositoryModel.cs:596
+2016-08-20 10:59:33.0706|INFO|thread:13|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 47 at RepositoryModel.cs:596 after waiting 1.44E-05s
+2016-08-20 10:59:33.0706|INFO|thread: 1|BranchSynchronizer|Took 8377ms to sync repository C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views - master
+2016-08-20 10:59:33.0916|INFO|thread:28|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 48 at GitClient.cs:267
+2016-08-20 10:59:33.0916|INFO|thread:28|AsyncReaderWriterLock|Released concurrent scheduler for operation: 47 at RepositoryModel.cs:596 after blocking 0.0192966s
+2016-08-20 10:59:33.0916|INFO|thread:13|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 48 at GitClient.cs:267 after waiting 9.14E-05s
+2016-08-20 10:59:33.0916|INFO|thread:24|AsyncReaderWriterLock|Released concurrent scheduler for operation: 46 at GitClient.cs:195 after blocking 0.0225479s
+2016-08-20 10:59:33.0916|INFO|thread:26|AsyncReaderWriterLock|Released concurrent scheduler for operation: 45 at RepositoryViewModel.cs:319 after blocking 0.0332557s
+2016-08-20 10:59:33.1071|INFO|thread:30|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 10:59:33.1071|INFO|thread:30|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 10:59:33.1071|INFO|thread:30|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'status --untracked-files=all --porcelain -z ', Working Directory: C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\
+2016-08-20 10:59:33.2107|INFO|thread:25|ConcurrentRepositoryConnection|Took 89ms to git status
+2016-08-20 10:59:33.2107|INFO|thread:25|ConcurrentRepositoryConnection|Took 90ms to git status and parse output
+2016-08-20 10:59:33.2167|INFO|thread:25|NewCommitViewModel|Took 125ms to load files for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views
+2016-08-20 10:59:33.2167|INFO|thread:25|AsyncReaderWriterLock|Released concurrent scheduler for operation: 48 at GitClient.cs:267 after blocking 0.1250874s
+2016-08-20 10:59:33.2330|INFO|thread: 1|NewCommitViewModel|Took 16ms to render file list for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views
+2016-08-20 10:59:34.9628|INFO|thread:14|DashboardViewModel|Selected repository 'JA812/JA812.github.io'
+2016-08-20 10:59:34.9678|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 49 at GitClient.cs:195
+2016-08-20 10:59:34.9678|INFO|thread: 8|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 49 at GitClient.cs:195 after waiting 4.89E-05s
+2016-08-20 10:59:34.9678|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 50 at RepositoryModel.cs:596
+2016-08-20 10:59:34.9678|INFO|thread:29|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 50 at RepositoryModel.cs:596 after waiting 1.95E-05s
+2016-08-20 10:59:34.9678|INFO|thread:28|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 51 at GitClient.cs:267
+2016-08-20 10:59:34.9678|INFO|thread:13|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 51 at GitClient.cs:267 after waiting 2.89E-05s
+2016-08-20 10:59:34.9678|INFO|thread:28|AsyncReaderWriterLock|Released concurrent scheduler for operation: 50 at RepositoryModel.cs:596 after blocking 0.0078979s
+2016-08-20 10:59:34.9678|INFO|thread:33|AsyncReaderWriterLock|Released concurrent scheduler for operation: 49 at GitClient.cs:195 after blocking 0.0091832s
+2016-08-20 10:59:34.9878|INFO|thread:16|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 10:59:34.9878|INFO|thread:16|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 10:59:34.9878|INFO|thread:16|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'status --untracked-files=all --porcelain -z ', Working Directory: C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io\
+2016-08-20 10:59:35.0754|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 52 at GitClient.cs:588
+2016-08-20 10:59:35.0754|INFO|thread:33|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 52 at GitClient.cs:588 after waiting 3.59E-05s
+2016-08-20 10:59:35.0754|INFO|thread: 4|AsyncReaderWriterLock|Released concurrent scheduler for operation: 52 at GitClient.cs:588 after blocking 0.0082156s
+2016-08-20 10:59:35.0944|INFO|thread:24|ConcurrentRepositoryConnection|Took 87ms to git status
+2016-08-20 10:59:35.0944|INFO|thread:24|ConcurrentRepositoryConnection|Took 88ms to git status and parse output
+2016-08-20 10:59:35.0944|INFO|thread:24|NewCommitViewModel|Took 118ms to load files for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io
+2016-08-20 10:59:35.0944|INFO|thread:24|AsyncReaderWriterLock|Released concurrent scheduler for operation: 51 at GitClient.cs:267 after blocking 0.1183427s
+2016-08-20 10:59:35.2466|INFO|thread: 1|NewCommitViewModel|Took 151ms to render file list for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io
+2016-08-20 10:59:35.2466|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 53 at RepositoryViewModel.cs:319
+2016-08-20 10:59:35.2466|INFO|thread: 4|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 53 at RepositoryViewModel.cs:319 after waiting 8.67E-05s
+2016-08-20 10:59:35.2556|WARN|thread:29|GetBranch`1|Could not resolve branch origin/master
+2016-08-20 10:59:35.2556|INFO|thread:29|AsyncReaderWriterLock|Released concurrent scheduler for operation: 53 at RepositoryViewModel.cs:319 after blocking 0.0087353s
+2016-08-20 10:59:47.1203|INFO|thread: 1|DashboardViewModel|Received request to clone: 'https://github.com/JA812/JA812.github.io.git'
+2016-08-20 10:59:59.8577|INFO|thread: 1|RepositoryModel|Cloning repo https://github.com/JA812/JA812.github.io.git
+2016-08-20 10:59:59.8577|INFO|thread: 1|GitLfsSmudgeTail|Setting Git LFS smudge progress environment variable
+2016-08-20 10:59:59.8577|INFO|thread: 1|RepositoryModel|Cloning 'https://github.com/JA812/JA812.github.io.git' to 'JA812.github.io' in directory 'C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views
+2016-08-20 10:59:59.8787|INFO|thread: 1|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 10:59:59.8787|INFO|thread: 1|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 10:59:59.8787|INFO|thread: 1|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'clone --progress --recursive  --  "https://github.com/JA812/JA812.github.io.git" "JA812.github.io" ', Working Directory: C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views
+2016-08-20 10:59:59.8993|INFO|thread:14|DashboardViewModel|Selected repository 'JA812/JA812.github.io'
+2016-08-20 11:00:00.1195|INFO|thread:14|DashboardViewModel|Took 0ms to Create RepositoryViewModel for location C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io
+2016-08-20 11:00:00.3446|INFO|thread:13|BackgroundFetcher|Got a refresh period for JA812/JA812.github.io of 300 seconds
+2016-08-20 11:00:00.3446|INFO|thread:13|BackgroundFetcher|Added a delay for JA812/JA812.github.io of 16581 milliseconds
+2016-08-20 11:00:00.5628|INFO|thread: 4|GitLfsSmudgeTail|Cleaning up Git LFS smudge progress environment variable
+2016-08-20 11:00:00.5628|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 54 at GitClient.cs:600
+2016-08-20 11:00:00.5628|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 55 at GitClient.cs:588
+2016-08-20 11:00:00.5628|INFO|thread: 1|DashboardViewModel|Selected repository 'JA812/JA812.github.io'
+2016-08-20 11:00:00.5628|INFO|thread:33|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 54 at GitClient.cs:600 after waiting 0.0007053s
+2016-08-20 11:00:00.5628|INFO|thread:29|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 55 at GitClient.cs:588 after waiting 0.0009545s
+2016-08-20 11:00:00.5628|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 56 at GitClient.cs:195
+2016-08-20 11:00:00.5628|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 57 at RepositoryModel.cs:596
+2016-08-20 11:00:00.5628|INFO|thread:25|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 56 at GitClient.cs:195 after waiting 0.0026307s
+2016-08-20 11:00:00.5768|INFO|thread: 4|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 57 at RepositoryModel.cs:596 after waiting 0.0055302s
+2016-08-20 11:00:00.5768|INFO|thread:28|AsyncReaderWriterLock|Released concurrent scheduler for operation: 55 at GitClient.cs:588 after blocking 0.0104731s
+2016-08-20 11:00:00.5768|INFO|thread:24|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 58 at RepositoryViewModel.cs:319
+2016-08-20 11:00:00.5768|INFO|thread:24|AsyncReaderWriterLock|Released concurrent scheduler for operation: 54 at GitClient.cs:600 after blocking 0.0128748s
+2016-08-20 11:00:00.5768|INFO|thread:24|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 58 at RepositoryViewModel.cs:319 after waiting 0.0001964s
+2016-08-20 11:00:00.5768|INFO|thread:25|AsyncReaderWriterLock|Released concurrent scheduler for operation: 56 at GitClient.cs:195 after blocking 0.011207s
+2016-08-20 11:00:00.5768|INFO|thread: 4|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 59 at GitClient.cs:267
+2016-08-20 11:00:00.5768|INFO|thread:13|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 59 at GitClient.cs:267 after waiting 4.75E-05s
+2016-08-20 11:00:00.5768|INFO|thread: 4|AsyncReaderWriterLock|Released concurrent scheduler for operation: 57 at RepositoryModel.cs:596 after blocking 0.012252s
+2016-08-20 11:00:00.5928|WARN|thread:24|GetBranch`1|Could not resolve branch origin/master
+2016-08-20 11:00:00.5928|INFO|thread:24|AsyncReaderWriterLock|Released concurrent scheduler for operation: 58 at RepositoryViewModel.cs:319 after blocking 0.0117649s
+2016-08-20 11:00:00.6069|INFO|thread:16|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 11:00:00.6069|INFO|thread:16|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 11:00:00.6069|INFO|thread:16|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'status --untracked-files=all --porcelain -z ', Working Directory: C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io\
+2016-08-20 11:00:00.7370|INFO|thread: 8|ConcurrentRepositoryConnection|Took 112ms to git status
+2016-08-20 11:00:00.7370|INFO|thread: 8|ConcurrentRepositoryConnection|Took 112ms to git status and parse output
+2016-08-20 11:00:00.7370|INFO|thread: 8|NewCommitViewModel|Took 147ms to load files for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io
+2016-08-20 11:00:00.7370|INFO|thread: 8|AsyncReaderWriterLock|Released concurrent scheduler for operation: 59 at GitClient.cs:267 after blocking 0.1475537s
+2016-08-20 11:00:00.7370|INFO|thread: 1|NewCommitViewModel|Took 1ms to render file list for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io
+2016-08-20 11:00:00.7370|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 60 at RepositoryViewModel.cs:319
+2016-08-20 11:00:00.7370|INFO|thread:24|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 60 at RepositoryViewModel.cs:319 after waiting 3.31E-05s
+2016-08-20 11:00:00.7500|WARN|thread:16|GetBranch`1|Could not resolve branch origin/master
+2016-08-20 11:00:00.7500|INFO|thread:16|AsyncReaderWriterLock|Released concurrent scheduler for operation: 60 at RepositoryViewModel.cs:319 after blocking 0.0115975s
+2016-08-20 11:00:00.8589|ERROR|thread:17|ComparisonGraph|JavaScript Alert from the comparison graph: http://github-app/: TypeError: Cannot read property 'selectCommit' of null
+2016-08-20 11:00:11.7846|INFO|thread: 1|RepositoryHost|Log in from cache for login 'JA812' to host 'https://api.github.com/' SUCCEEDED
+2016-08-20 11:00:11.7846|ERROR|thread: 1|BranchSynchronizer|Branch was not updated before refresh was called
+2016-08-20 11:00:13.4796|INFO|thread: 1|RepositoryHost|Log in from cache for login 'JA812' to host 'https://api.github.com/' SUCCEEDED
+2016-08-20 11:00:13.4821|ERROR|thread: 1|BranchSynchronizer|Branch was not updated before refresh was called
+2016-08-20 11:00:14.6594|INFO|thread:28|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 61 at RepositoryModel.cs:596
+2016-08-20 11:00:14.6594|INFO|thread:43|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 61 at RepositoryModel.cs:596 after waiting 3.54E-05s
+2016-08-20 11:00:14.6704|INFO|thread:28|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 62 at BranchSelectionViewModel.cs:191
+2016-08-20 11:00:14.6704|INFO|thread:24|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 62 at BranchSelectionViewModel.cs:191 after waiting 7.55E-05s
+2016-08-20 11:00:14.6704|INFO|thread:28|AsyncReaderWriterLock|Released concurrent scheduler for operation: 61 at RepositoryModel.cs:596 after blocking 0.0110446s
+2016-08-20 11:00:14.6919|INFO|thread: 4|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 11:00:14.6919|INFO|thread: 4|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 11:00:14.6919|INFO|thread: 4|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'log -g --abbrev-commit --pretty=oneline HEAD -n 2500 ', Working Directory: C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io\
+2016-08-20 11:00:14.7983|INFO|thread: 4|AsyncReaderWriterLock|Released concurrent scheduler for operation: 62 at BranchSelectionViewModel.cs:191 after blocking 0.1282085s
+2016-08-20 11:00:27.4857|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 63 at GitClient.cs:195
+2016-08-20 11:00:27.4857|INFO|thread:24|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 63 at GitClient.cs:195 after waiting 3.63E-05s
+2016-08-20 11:00:27.4857|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 64 at RepositoryModel.cs:596
+2016-08-20 11:00:27.4857|INFO|thread:28|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 64 at RepositoryModel.cs:596 after waiting 1.63E-05s
+2016-08-20 11:00:27.4977|INFO|thread: 4|AsyncReaderWriterLock|Released concurrent scheduler for operation: 63 at GitClient.cs:195 after blocking 0.0114766s
+2016-08-20 11:00:27.4977|INFO|thread:43|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 65 at GitClient.cs:267
+2016-08-20 11:00:27.4977|INFO|thread:43|AsyncReaderWriterLock|Released concurrent scheduler for operation: 64 at RepositoryModel.cs:596 after blocking 0.0118792s
+2016-08-20 11:00:27.4977|INFO|thread:28|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 65 at GitClient.cs:267 after waiting 9.79E-05s
+2016-08-20 11:00:27.5127|INFO|thread:43|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 11:00:27.5127|INFO|thread:43|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 11:00:27.5127|INFO|thread:43|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'status --untracked-files=all --porcelain -z ', Working Directory: C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io\
+2016-08-20 11:00:27.6218|INFO|thread:26|ConcurrentRepositoryConnection|Took 94ms to git status
+2016-08-20 11:00:27.6218|INFO|thread:26|ConcurrentRepositoryConnection|Took 94ms to git status and parse output
+2016-08-20 11:00:27.6218|INFO|thread:26|NewCommitViewModel|Took 124ms to load files for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io
+2016-08-20 11:00:27.6218|INFO|thread:26|AsyncReaderWriterLock|Released concurrent scheduler for operation: 65 at GitClient.cs:267 after blocking 0.1241576s
+2016-08-20 11:00:27.6218|INFO|thread: 1|NewCommitViewModel|Took 0ms to render file list for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io
+2016-08-20 11:00:27.6218|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 66 at RepositoryViewModel.cs:319
+2016-08-20 11:00:27.6218|INFO|thread: 4|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 66 at RepositoryViewModel.cs:319 after waiting 2.37E-05s
+2016-08-20 11:00:27.6218|WARN|thread:35|GetBranch`1|Could not resolve branch origin/master
+2016-08-20 11:00:27.6218|INFO|thread:35|AsyncReaderWriterLock|Released concurrent scheduler for operation: 66 at RepositoryViewModel.cs:319 after blocking 0.0075858s
+2016-08-20 11:00:40.7377|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 67 at GitClient.cs:195
+2016-08-20 11:00:40.7377|INFO|thread:28|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 67 at GitClient.cs:195 after waiting 3.87E-05s
+2016-08-20 11:00:40.7377|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 68 at RepositoryModel.cs:596
+2016-08-20 11:00:40.7377|INFO|thread: 4|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 68 at RepositoryModel.cs:596 after waiting 8.3E-05s
+2016-08-20 11:00:40.7522|INFO|thread:35|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 69 at GitClient.cs:267
+2016-08-20 11:00:40.7522|INFO|thread:24|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 69 at GitClient.cs:267 after waiting 4.24E-05s
+2016-08-20 11:00:40.7522|INFO|thread:35|AsyncReaderWriterLock|Released concurrent scheduler for operation: 68 at RepositoryModel.cs:596 after blocking 0.0140915s
+2016-08-20 11:00:40.7522|INFO|thread:33|AsyncReaderWriterLock|Released concurrent scheduler for operation: 67 at GitClient.cs:195 after blocking 0.0164709s
+2016-08-20 11:00:40.7712|INFO|thread:26|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 11:00:40.7712|INFO|thread:26|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 11:00:40.7712|INFO|thread:26|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'status --untracked-files=all --porcelain -z ', Working Directory: C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io\
+2016-08-20 11:00:40.9211|INFO|thread:21|ConcurrentRepositoryConnection|Took 129ms to git status
+2016-08-20 11:00:40.9211|INFO|thread:21|ConcurrentRepositoryConnection|Took 130ms to git status and parse output
+2016-08-20 11:00:40.9211|INFO|thread:21|NewCommitViewModel|Took 170ms to load files for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io
+2016-08-20 11:00:40.9211|INFO|thread:21|AsyncReaderWriterLock|Released concurrent scheduler for operation: 69 at GitClient.cs:267 after blocking 0.1700176s
+2016-08-20 11:00:40.9211|INFO|thread: 1|NewCommitViewModel|Took 0ms to render file list for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io
+2016-08-20 11:00:40.9211|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 70 at RepositoryViewModel.cs:319
+2016-08-20 11:00:40.9211|INFO|thread:35|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 70 at RepositoryViewModel.cs:319 after waiting 2.14E-05s
+2016-08-20 11:00:40.9351|WARN|thread:33|GetBranch`1|Could not resolve branch origin/master
+2016-08-20 11:00:40.9351|INFO|thread:33|AsyncReaderWriterLock|Released concurrent scheduler for operation: 70 at RepositoryViewModel.cs:319 after blocking 0.0124442s
+2016-08-20 11:05:16.8129|INFO|thread:35|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 71 at GitClient.cs:195
+2016-08-20 11:05:16.8129|INFO|thread:35|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 72 at RepositoryModel.cs:596
+2016-08-20 11:05:16.8129|INFO|thread:35|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 71 at GitClient.cs:195 after waiting 0.002892s
+2016-08-20 11:05:16.8344|INFO|thread:28|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 72 at RepositoryModel.cs:596 after waiting 0.0215411s
+2016-08-20 11:05:16.8444|INFO|thread:28|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 73 at GitClient.cs:267
+2016-08-20 11:05:16.8444|INFO|thread:34|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 73 at GitClient.cs:267 after waiting 4.1E-05s
+2016-08-20 11:05:16.8444|INFO|thread:28|AsyncReaderWriterLock|Released concurrent scheduler for operation: 72 at RepositoryModel.cs:596 after blocking 0.0098811s
+2016-08-20 11:05:16.8444|INFO|thread: 4|AsyncReaderWriterLock|Released concurrent scheduler for operation: 71 at GitClient.cs:195 after blocking 0.0295067s
+2016-08-20 11:05:16.8585|INFO|thread:28|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 11:05:16.8585|INFO|thread:28|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 11:05:16.8585|INFO|thread:28|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'status --untracked-files=all --porcelain -z ', Working Directory: C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io\
+2016-08-20 11:05:16.9884|INFO|thread:28|ConcurrentRepositoryConnection|Took 112ms to git status
+2016-08-20 11:05:16.9884|INFO|thread:28|ConcurrentRepositoryConnection|Took 112ms to git status and parse output
+2016-08-20 11:05:16.9884|INFO|thread:28|NewCommitViewModel|Took 144ms to load files for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io
+2016-08-20 11:05:16.9884|INFO|thread:28|AsyncReaderWriterLock|Released concurrent scheduler for operation: 73 at GitClient.cs:267 after blocking 0.1446075s
+2016-08-20 11:05:16.9884|INFO|thread: 1|NewCommitViewModel|Took 0ms to render file list for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io
+2016-08-20 11:05:17.0054|INFO|thread:35|BackgroundFetcher|Got a refresh period for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io\.git of 300 seconds
+2016-08-20 11:05:17.0054|INFO|thread:35|BackgroundFetcher|Added a delay for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io\.git of 8816 milliseconds
+2016-08-20 11:05:17.0264|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 74 at GitClient.cs:600
+2016-08-20 11:05:17.0264|INFO|thread:28|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 74 at GitClient.cs:600 after waiting 3.31E-05s
+2016-08-20 11:05:17.0384|INFO|thread:35|AsyncReaderWriterLock|Released concurrent scheduler for operation: 74 at GitClient.cs:600 after blocking 0.0115741s
+2016-08-20 11:05:17.0384|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 75 at RepositoryViewModel.cs:319
+2016-08-20 11:05:17.0384|INFO|thread:28|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 75 at RepositoryViewModel.cs:319 after waiting 2.09E-05s
+2016-08-20 11:05:17.0464|WARN|thread:35|GetBranch`1|Could not resolve branch origin/master
+2016-08-20 11:05:17.0464|INFO|thread:35|AsyncReaderWriterLock|Released concurrent scheduler for operation: 75 at RepositoryViewModel.cs:319 after blocking 0.0080439s
+2016-08-20 11:10:25.6461|INFO|thread:34|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 76 at GitClient.cs:195
+2016-08-20 11:10:25.6461|INFO|thread:28|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 76 at GitClient.cs:195 after waiting 6.81E-05s
+2016-08-20 11:10:25.6461|INFO|thread:34|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 77 at RepositoryModel.cs:596
+2016-08-20 11:10:25.6461|INFO|thread:34|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 77 at RepositoryModel.cs:596 after waiting 0.0023419s
+2016-08-20 11:10:25.6731|INFO|thread:34|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 78 at GitClient.cs:267
+2016-08-20 11:10:25.6731|INFO|thread:34|AsyncReaderWriterLock|Released concurrent scheduler for operation: 77 at RepositoryModel.cs:596 after blocking 0.0235719s
+2016-08-20 11:10:25.6731|INFO|thread:34|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 78 at GitClient.cs:267 after waiting 0.0001306s
+2016-08-20 11:10:25.6965|INFO|thread:35|AsyncReaderWriterLock|Released concurrent scheduler for operation: 76 at GitClient.cs:195 after blocking 0.0498139s
+2016-08-20 11:10:25.7005|INFO|thread: 4|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 11:10:25.7005|INFO|thread: 4|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 11:10:25.7005|INFO|thread: 4|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'status --untracked-files=all --porcelain -z ', Working Directory: C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io\
+2016-08-20 11:10:25.8185|INFO|thread: 4|ConcurrentRepositoryConnection|Took 100ms to git status
+2016-08-20 11:10:25.8185|INFO|thread: 4|ConcurrentRepositoryConnection|Took 103ms to git status and parse output
+2016-08-20 11:10:25.8185|INFO|thread: 4|NewCommitViewModel|Took 150ms to load files for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io
+2016-08-20 11:10:25.8185|INFO|thread: 4|AsyncReaderWriterLock|Released concurrent scheduler for operation: 78 at GitClient.cs:267 after blocking 0.1499596s
+2016-08-20 11:10:25.8185|INFO|thread: 1|NewCommitViewModel|Took 0ms to render file list for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io
+2016-08-20 11:10:25.8370|INFO|thread:35|BackgroundFetcher|Got a refresh period for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io\.git of 300 seconds
+2016-08-20 11:10:25.8370|INFO|thread:35|BackgroundFetcher|Added a delay for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io\.git of 28537 milliseconds
+2016-08-20 11:10:25.8730|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 79 at GitClient.cs:600
+2016-08-20 11:10:25.8730|INFO|thread:35|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 79 at GitClient.cs:600 after waiting 5.41E-05s
+2016-08-20 11:10:25.8730|INFO|thread:28|AsyncReaderWriterLock|Released concurrent scheduler for operation: 79 at GitClient.cs:600 after blocking 0.0077976s
+2016-08-20 11:10:25.8730|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 80 at RepositoryViewModel.cs:319
+2016-08-20 11:10:25.8730|INFO|thread:28|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 80 at RepositoryViewModel.cs:319 after waiting 4.1E-05s
+2016-08-20 11:10:25.8910|WARN|thread:35|GetBranch`1|Could not resolve branch origin/master
+2016-08-20 11:10:25.8910|INFO|thread:35|AsyncReaderWriterLock|Released concurrent scheduler for operation: 80 at RepositoryViewModel.cs:319 after blocking 0.0101731s
+2016-08-20 11:15:54.1910|INFO|thread: 4|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 81 at GitClient.cs:195
+2016-08-20 11:15:54.1910|INFO|thread:30|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 81 at GitClient.cs:195 after waiting 0.0004399s
+2016-08-20 11:15:54.1910|INFO|thread: 4|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 82 at RepositoryModel.cs:596
+2016-08-20 11:15:54.1910|INFO|thread:39|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 82 at RepositoryModel.cs:596 after waiting 0.0005173s
+2016-08-20 11:15:54.2170|INFO|thread:30|AsyncReaderWriterLock|Released concurrent scheduler for operation: 81 at GitClient.cs:195 after blocking 0.026212s
+2016-08-20 11:15:54.2170|INFO|thread:41|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 83 at GitClient.cs:267
+2016-08-20 11:15:54.2170|INFO|thread:19|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 83 at GitClient.cs:267 after waiting 9.33E-05s
+2016-08-20 11:15:54.2170|INFO|thread:41|AsyncReaderWriterLock|Released concurrent scheduler for operation: 82 at RepositoryModel.cs:596 after blocking 0.0266692s
+2016-08-20 11:15:54.2360|INFO|thread:16|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 11:15:54.2360|INFO|thread:16|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 11:15:54.2360|INFO|thread:16|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'status --untracked-files=all --porcelain -z ', Working Directory: C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io\
+2016-08-20 11:15:54.3561|INFO|thread:35|ConcurrentRepositoryConnection|Took 97ms to git status
+2016-08-20 11:15:54.3561|INFO|thread:35|ConcurrentRepositoryConnection|Took 97ms to git status and parse output
+2016-08-20 11:15:54.3561|INFO|thread:35|NewCommitViewModel|Took 137ms to load files for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io
+2016-08-20 11:15:54.3561|INFO|thread:35|AsyncReaderWriterLock|Released concurrent scheduler for operation: 83 at GitClient.cs:267 after blocking 0.1377724s
+2016-08-20 11:15:54.3561|INFO|thread: 1|NewCommitViewModel|Took 0ms to render file list for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io
+2016-08-20 11:15:54.3561|INFO|thread:35|BackgroundFetcher|Got a refresh period for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io\.git of 300 seconds
+2016-08-20 11:15:54.3561|INFO|thread:35|BackgroundFetcher|Added a delay for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io\.git of 12910 milliseconds
+2016-08-20 11:15:54.3846|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 84 at GitClient.cs:600
+2016-08-20 11:15:54.3846|INFO|thread:28|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 84 at GitClient.cs:600 after waiting 3.49E-05s
+2016-08-20 11:15:54.3958|INFO|thread:16|AsyncReaderWriterLock|Released concurrent scheduler for operation: 84 at GitClient.cs:600 after blocking 0.0115014s
+2016-08-20 11:15:54.3958|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 85 at RepositoryViewModel.cs:319
+2016-08-20 11:15:54.3958|INFO|thread:16|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 85 at RepositoryViewModel.cs:319 after waiting 1.81E-05s
+2016-08-20 11:15:54.4049|WARN|thread:34|GetBranch`1|Could not resolve branch origin/master
+2016-08-20 11:15:54.4049|INFO|thread:34|AsyncReaderWriterLock|Released concurrent scheduler for operation: 85 at RepositoryViewModel.cs:319 after blocking 0.0089345s
+2016-08-20 11:21:07.1191|INFO|thread:28|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 86 at GitClient.cs:195
+2016-08-20 11:21:07.1191|INFO|thread:16|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 86 at GitClient.cs:195 after waiting 6.9E-05s
+2016-08-20 11:21:07.1191|INFO|thread:28|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 87 at RepositoryModel.cs:596
+2016-08-20 11:21:07.1251|INFO|thread:28|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 87 at RepositoryModel.cs:596 after waiting 0.0049419s
+2016-08-20 11:21:07.1381|INFO|thread:35|AsyncReaderWriterLock|Released concurrent scheduler for operation: 86 at GitClient.cs:195 after blocking 0.0181443s
+2016-08-20 11:21:07.1381|INFO|thread:28|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 88 at GitClient.cs:267
+2016-08-20 11:21:07.1381|INFO|thread:21|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 88 at GitClient.cs:267 after waiting 5.41E-05s
+2016-08-20 11:21:07.1381|INFO|thread:28|AsyncReaderWriterLock|Released concurrent scheduler for operation: 87 at RepositoryModel.cs:596 after blocking 0.0138429s
+2016-08-20 11:21:07.1381|INFO|thread:29|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 11:21:07.1381|INFO|thread:29|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 11:21:07.1381|INFO|thread:29|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'status --untracked-files=all --porcelain -z ', Working Directory: C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io\
+2016-08-20 11:21:07.2516|INFO|thread:16|ConcurrentRepositoryConnection|Took 82ms to git status
+2016-08-20 11:21:07.2516|INFO|thread:16|ConcurrentRepositoryConnection|Took 83ms to git status and parse output
+2016-08-20 11:21:07.2516|INFO|thread:16|NewCommitViewModel|Took 112ms to load files for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io
+2016-08-20 11:21:07.2516|INFO|thread:16|AsyncReaderWriterLock|Released concurrent scheduler for operation: 88 at GitClient.cs:267 after blocking 0.1126492s
+2016-08-20 11:21:07.2516|INFO|thread: 1|NewCommitViewModel|Took 0ms to render file list for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io
+2016-08-20 11:21:07.3222|INFO|thread:21|BackgroundFetcher|Got a refresh period for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io\.git of 300 seconds
+2016-08-20 11:21:07.3222|INFO|thread:21|BackgroundFetcher|Added a delay for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io\.git of 6529 milliseconds
+2016-08-20 11:21:07.3417|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 89 at GitClient.cs:600
+2016-08-20 11:21:07.3417|INFO|thread:29|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 89 at GitClient.cs:600 after waiting 3.54E-05s
+2016-08-20 11:21:07.3417|INFO|thread:23|AsyncReaderWriterLock|Released concurrent scheduler for operation: 89 at GitClient.cs:600 after blocking 0.0059128s
+2016-08-20 11:21:07.3417|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 90 at RepositoryViewModel.cs:319
+2016-08-20 11:21:07.3417|INFO|thread:35|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 90 at RepositoryViewModel.cs:319 after waiting 3.4E-05s
+2016-08-20 11:21:07.3417|WARN|thread:21|GetBranch`1|Could not resolve branch origin/master
+2016-08-20 11:21:07.3417|INFO|thread:21|AsyncReaderWriterLock|Released concurrent scheduler for operation: 90 at RepositoryViewModel.cs:319 after blocking 0.005693s
+2016-08-20 11:26:13.6682|INFO|thread:23|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 91 at GitClient.cs:195
+2016-08-20 11:26:13.6682|INFO|thread:26|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 91 at GitClient.cs:195 after waiting 0.0001152s
+2016-08-20 11:26:13.6692|INFO|thread:23|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 92 at RepositoryModel.cs:596
+2016-08-20 11:26:13.6692|INFO|thread:29|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 92 at RepositoryModel.cs:596 after waiting 0.0006536s
+2016-08-20 11:26:13.6953|INFO|thread:43|AsyncReaderWriterLock|Released concurrent scheduler for operation: 91 at GitClient.cs:195 after blocking 0.0264028s
+2016-08-20 11:26:13.6953|INFO|thread:29|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 93 at GitClient.cs:267
+2016-08-20 11:26:13.6953|INFO|thread:25|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 93 at GitClient.cs:267 after waiting 9.98E-05s
+2016-08-20 11:26:13.6953|INFO|thread:29|AsyncReaderWriterLock|Released concurrent scheduler for operation: 92 at RepositoryModel.cs:596 after blocking 0.0258775s
+2016-08-20 11:26:13.7088|INFO|thread:44|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 11:26:13.7088|INFO|thread:44|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 11:26:13.7088|INFO|thread:44|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'status --untracked-files=all --porcelain -z ', Working Directory: C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io\
+2016-08-20 11:26:13.8277|INFO|thread:13|ConcurrentRepositoryConnection|Took 98ms to git status
+2016-08-20 11:26:13.8277|INFO|thread:13|ConcurrentRepositoryConnection|Took 98ms to git status and parse output
+2016-08-20 11:26:13.8277|INFO|thread:13|NewCommitViewModel|Took 132ms to load files for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io
+2016-08-20 11:26:13.8277|INFO|thread:13|AsyncReaderWriterLock|Released concurrent scheduler for operation: 93 at GitClient.cs:267 after blocking 0.1325593s
+2016-08-20 11:26:13.8277|INFO|thread: 1|NewCommitViewModel|Took 0ms to render file list for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io
+2016-08-20 11:26:13.8477|INFO|thread:26|BackgroundFetcher|Got a refresh period for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io\.git of 300 seconds
+2016-08-20 11:26:13.8477|INFO|thread:26|BackgroundFetcher|Added a delay for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io\.git of 18091 milliseconds
+2016-08-20 11:26:13.8867|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 94 at GitClient.cs:600
+2016-08-20 11:26:13.8867|INFO|thread:26|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 94 at GitClient.cs:600 after waiting 3.77E-05s
+2016-08-20 11:26:13.8957|INFO|thread:13|AsyncReaderWriterLock|Released concurrent scheduler for operation: 94 at GitClient.cs:600 after blocking 0.0090581s
+2016-08-20 11:26:13.8957|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 95 at RepositoryViewModel.cs:319
+2016-08-20 11:26:13.8957|INFO|thread:25|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 95 at RepositoryViewModel.cs:319 after waiting 8.3E-05s
+2016-08-20 11:26:13.9052|WARN|thread:25|GetBranch`1|Could not resolve branch origin/master
+2016-08-20 11:26:13.9052|INFO|thread:25|AsyncReaderWriterLock|Released concurrent scheduler for operation: 95 at RepositoryViewModel.cs:319 after blocking 0.0092741s
+2016-08-20 11:31:31.7633|INFO|thread:29|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 96 at GitClient.cs:195
+2016-08-20 11:31:31.7633|INFO|thread:13|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 96 at GitClient.cs:195 after waiting 4.8E-05s
+2016-08-20 11:31:31.7633|INFO|thread:29|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 97 at RepositoryModel.cs:596
+2016-08-20 11:31:31.7633|INFO|thread:29|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 97 at RepositoryModel.cs:596 after waiting 0.0011803s
+2016-08-20 11:31:31.7633|INFO|thread:29|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 98 at GitClient.cs:267
+2016-08-20 11:31:31.7633|INFO|thread:29|AsyncReaderWriterLock|Released concurrent scheduler for operation: 97 at RepositoryModel.cs:596 after blocking 0.0063485s
+2016-08-20 11:31:31.7633|INFO|thread:29|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 98 at GitClient.cs:267 after waiting 8.44E-05s
+2016-08-20 11:31:31.7833|INFO|thread:25|AsyncReaderWriterLock|Released concurrent scheduler for operation: 96 at GitClient.cs:195 after blocking 0.0202596s
+2016-08-20 11:31:31.7833|INFO|thread:26|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 11:31:31.7833|INFO|thread:26|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 11:31:31.7833|INFO|thread:26|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'status --untracked-files=all --porcelain -z ', Working Directory: C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io\
+2016-08-20 11:31:31.8905|INFO|thread:26|ConcurrentRepositoryConnection|Took 82ms to git status
+2016-08-20 11:31:31.8905|INFO|thread:26|ConcurrentRepositoryConnection|Took 83ms to git status and parse output
+2016-08-20 11:31:31.8905|INFO|thread:26|NewCommitViewModel|Took 119ms to load files for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io
+2016-08-20 11:31:31.8905|INFO|thread:26|AsyncReaderWriterLock|Released concurrent scheduler for operation: 98 at GitClient.cs:267 after blocking 0.1193341s
+2016-08-20 11:31:31.8905|INFO|thread: 1|NewCommitViewModel|Took 0ms to render file list for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io
+2016-08-20 11:31:31.9330|INFO|thread:25|BackgroundFetcher|Got a refresh period for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io\.git of 300 seconds
+2016-08-20 11:31:31.9330|INFO|thread:25|BackgroundFetcher|Added a delay for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io\.git of 27902 milliseconds
+2016-08-20 11:31:31.9556|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 99 at GitClient.cs:600
+2016-08-20 11:31:31.9556|INFO|thread:25|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 99 at GitClient.cs:600 after waiting 3.82E-05s
+2016-08-20 11:31:31.9556|INFO|thread:26|AsyncReaderWriterLock|Released concurrent scheduler for operation: 99 at GitClient.cs:600 after blocking 0.0056357s
+2016-08-20 11:31:31.9556|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 100 at RepositoryViewModel.cs:319
+2016-08-20 11:31:31.9556|INFO|thread:13|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 100 at RepositoryViewModel.cs:319 after waiting 3.96E-05s
+2016-08-20 11:31:31.9666|WARN|thread:25|GetBranch`1|Could not resolve branch origin/master
+2016-08-20 11:31:31.9666|INFO|thread:25|AsyncReaderWriterLock|Released concurrent scheduler for operation: 100 at RepositoryViewModel.cs:319 after blocking 0.005693s
+2016-08-20 11:36:46.5459|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 101 at GitClient.cs:195
+2016-08-20 11:36:46.5459|INFO|thread:26|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 101 at GitClient.cs:195 after waiting 7.46E-05s
+2016-08-20 11:36:46.5459|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 102 at RepositoryModel.cs:596
+2016-08-20 11:36:46.5459|INFO|thread:29|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 102 at RepositoryModel.cs:596 after waiting 7.93E-05s
+2016-08-20 11:36:46.5459|WARN|thread:25|RepositoryModel|concurrent connection for GitClient.cs:195 signalled RepositoryNotFoundException. Marked repository as lost on disk.
+LibGit2Sharp.RepositoryNotFoundException: Path 'C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io\.git' doesn't point at a valid Git repository or workdir.
+   at LibGit2Sharp.Core.Proxy.git_repository_open(String path)
+   at LibGit2Sharp.Repository..ctor(String path, RepositoryOptions options)
+   at GitHub.Models.RepositoryModel.CreateRepositoryForConnection()
+   at GitHub.Models.RepositoryModel.<>c__DisplayClass7c`2.<RunConnectionOperation>b__75()
+2016-08-20 11:36:46.5459|WARN|thread:29|RepositoryModel|concurrent connection for RepositoryModel.cs:596 signalled RepositoryNotFoundException. Marked repository as lost on disk.
+LibGit2Sharp.RepositoryNotFoundException: Path 'C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io\.git' doesn't point at a valid Git repository or workdir.
+   at LibGit2Sharp.Core.Proxy.git_repository_open(String path)
+   at LibGit2Sharp.Repository..ctor(String path, RepositoryOptions options)
+   at GitHub.Models.RepositoryModel.CreateRepositoryForConnection()
+   at GitHub.Models.RepositoryModel.<>c__DisplayClass7c`2.<RunConnectionOperation>b__75()
+2016-08-20 11:36:46.5639|INFO|thread:25|AsyncReaderWriterLock|Released concurrent scheduler for operation: 101 at GitClient.cs:195 after blocking 0.0175733s
+2016-08-20 11:36:46.5639|WARN|thread:29|RepositoryModel|Could not refresh head of  as it was missing from disk
+2016-08-20 11:36:46.5639|INFO|thread:29|AsyncReaderWriterLock|Released concurrent scheduler for operation: 102 at RepositoryModel.cs:596 after blocking 0.0157076s
+2016-08-20 11:36:46.5639|INFO|thread:29|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 103 at GitClient.cs:267
+2016-08-20 11:36:46.5639|INFO|thread:21|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 103 at GitClient.cs:267 after waiting 4.38E-05s
+2016-08-20 11:36:46.5639|WARN|thread:26|RepositoryModel|concurrent connection for GitClient.cs:267 signalled RepositoryNotFoundException. Marked repository as lost on disk.
+LibGit2Sharp.RepositoryNotFoundException: Path 'C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io\.git' doesn't point at a valid Git repository or workdir.
+   at LibGit2Sharp.Core.Proxy.git_repository_open(String path)
+   at LibGit2Sharp.Repository..ctor(String path, RepositoryOptions options)
+   at GitHub.Models.RepositoryModel.CreateRepositoryForConnection()
+   at GitHub.Models.RepositoryModel.<>c__DisplayClass7c`2.<RunConnectionOperation>b__75()
+2016-08-20 11:36:46.5639|INFO|thread:26|AsyncReaderWriterLock|Released concurrent scheduler for operation: 103 at GitClient.cs:267 after blocking 0.0014271s
+2016-08-20 11:36:46.6055|WARN|thread: 1|BranchesViewModel|Unable to refresh branches
+2016-08-20 11:36:46.6135|WARN|thread: 1|MissingRepositoryUserErrorExtensions|Repository  is missing from disk - throwing a user error.
+2016-08-20 11:36:46.6135|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 104 at RepositoryViewModel.cs:319
+2016-08-20 11:36:46.6135|INFO|thread:21|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 104 at RepositoryViewModel.cs:319 after waiting 0.0001441s
+2016-08-20 11:36:46.6255|WARN|thread:36|RepositoryModel|concurrent connection for RepositoryViewModel.cs:319 signalled RepositoryNotFoundException. Marked repository as lost on disk.
+LibGit2Sharp.RepositoryNotFoundException: Path 'C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io\.git' doesn't point at a valid Git repository or workdir.
+   at LibGit2Sharp.Core.Proxy.git_repository_open(String path)
+   at LibGit2Sharp.Repository..ctor(String path, RepositoryOptions options)
+   at GitHub.Models.RepositoryModel.CreateRepositoryForConnection()
+   at GitHub.Models.RepositoryModel.<>c__DisplayClass7c`2.<RunConnectionOperation>b__75()
+2016-08-20 11:36:46.6255|WARN|thread:36|MissingRepositoryUserErrorExtensions|Repository  is missing from disk - throwing a user error.
+2016-08-20 11:36:46.6255|INFO|thread:36|AsyncReaderWriterLock|Released concurrent scheduler for operation: 104 at RepositoryViewModel.cs:319 after blocking 0.0131384s
+2016-08-20 11:36:49.6853|ERROR|thread: 1|RepositoryNotFoundViewModel|Error while getting the local working directories parent directory. Defaulting to the desktop path
+System.IO.DirectoryNotFoundException: The directory 'C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io' does not exist
+   at GitHub.IO.OperatingSystemBridge.GetParentDirectory(String path)
+   at GitHub.ViewModels.RepositoryNotFoundViewModel.<>c__DisplayClass10.<<.ctor>b__4>d__13.MoveNext()
+2016-08-20 11:36:59.8856|INFO|thread:13|BackgroundFetcher|Got a refresh period for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io\.git of 300 seconds
+2016-08-20 11:36:59.8856|INFO|thread:13|BackgroundFetcher|Added a delay for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\views\JA812.github.io\.git of 3515 milliseconds
+2016-08-20 11:37:00.8503|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 105 at RepositoryModel.cs:1442
+2016-08-20 11:37:00.8503|INFO|thread:36|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 105 at RepositoryModel.cs:1442 after waiting 6.43E-05s
+2016-08-20 11:37:00.8733|INFO|thread:29|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 106 at GitClient.cs:588
+2016-08-20 11:37:00.8733|INFO|thread:13|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 106 at GitClient.cs:588 after waiting 4.57E-05s
+2016-08-20 11:37:00.8733|INFO|thread:29|AsyncReaderWriterLock|Released concurrent scheduler for operation: 105 at RepositoryModel.cs:1442 after blocking 0.023223s
+2016-08-20 11:37:00.8733|INFO|thread:21|AsyncReaderWriterLock|Released concurrent scheduler for operation: 106 at GitClient.cs:588 after blocking 0.012816s
+2016-08-20 11:37:00.8883|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 107 at RepositoryViewModel.cs:319
+2016-08-20 11:37:00.8883|INFO|thread:25|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 107 at RepositoryViewModel.cs:319 after waiting 4.47E-05s
+2016-08-20 11:37:00.8883|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 108 at GitClient.cs:600
+2016-08-20 11:37:00.8883|INFO|thread:21|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 108 at GitClient.cs:600 after waiting 2.65E-05s
+2016-08-20 11:37:00.8883|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 109 at GitClient.cs:195
+2016-08-20 11:37:00.8883|INFO|thread:29|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 109 at GitClient.cs:195 after waiting 3.96E-05s
+2016-08-20 11:37:00.8883|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 110 at RepositoryModel.cs:596
+2016-08-20 11:37:00.9118|WARN|thread:36|GetBranch`1|Could not resolve branch origin/master
+2016-08-20 11:37:00.9118|INFO|thread:36|AsyncReaderWriterLock|Released concurrent scheduler for operation: 107 at RepositoryViewModel.cs:319 after blocking 0.0240212s
+2016-08-20 11:37:00.9118|INFO|thread:25|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 110 at RepositoryModel.cs:596 after waiting 0.0132308s
+2016-08-20 11:37:00.9238|INFO|thread:26|AsyncReaderWriterLock|Released concurrent scheduler for operation: 108 at GitClient.cs:600 after blocking 0.0349497s
+2016-08-20 11:37:00.9348|INFO|thread:36|AsyncReaderWriterLock|Released concurrent scheduler for operation: 109 at GitClient.cs:195 after blocking 0.0361608s
+2016-08-20 11:37:00.9348|INFO|thread:21|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 111 at GitClient.cs:267
+2016-08-20 11:37:00.9348|INFO|thread:36|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 111 at GitClient.cs:267 after waiting 5.17E-05s
+2016-08-20 11:37:00.9348|INFO|thread:21|AsyncReaderWriterLock|Released concurrent scheduler for operation: 110 at RepositoryModel.cs:596 after blocking 0.0281836s
+2016-08-20 11:37:00.9759|INFO|thread:26|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 11:37:00.9759|INFO|thread:26|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 11:37:00.9759|INFO|thread:26|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'status --untracked-files=all --porcelain -z ', Working Directory: C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io\
+2016-08-20 11:37:01.1747|INFO|thread:25|ConcurrentRepositoryConnection|Took 166ms to git status
+2016-08-20 11:37:01.1747|INFO|thread:25|ConcurrentRepositoryConnection|Took 167ms to git status and parse output
+2016-08-20 11:37:01.1947|INFO|thread:25|NewCommitViewModel|Took 253ms to load files for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io
+2016-08-20 11:37:01.1947|INFO|thread:25|AsyncReaderWriterLock|Released concurrent scheduler for operation: 111 at GitClient.cs:267 after blocking 0.2535487s
+2016-08-20 11:37:01.2007|INFO|thread: 1|NewCommitViewModel|Took 5ms to render file list for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io
+2016-08-20 11:37:01.2007|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 112 at RepositoryViewModel.cs:319
+2016-08-20 11:37:01.2007|INFO|thread:21|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 112 at RepositoryViewModel.cs:319 after waiting 4.38E-05s
+2016-08-20 11:37:01.2167|WARN|thread:36|GetBranch`1|Could not resolve branch origin/master
+2016-08-20 11:37:01.2167|INFO|thread:36|AsyncReaderWriterLock|Released concurrent scheduler for operation: 112 at RepositoryViewModel.cs:319 after blocking 0.0160402s
+2016-08-20 11:37:16.2565|WARN|thread: 1|StandardUserErrors|Showing user error Failed to create a new commit.
+System.ArgumentNullException: Failed Null Check on 'commitModel'
+Parameter name: commitModel
+   at GitHub.Helpers.Ensure.ArgumentNotNull(Object value, String name)
+   at GitHub.ViewModels.CommitViewModel..ctor(IRepositoryModel repository, ICommitModel commitModel, ICommittedFileForklift committedFileForklift, IAvatarProvider avatarProvider, IInlineTextProvider inlineTextProvider)
+   at GitHub.Helpers.CommitCreator.<>c__DisplayClass2.<CreateCommit>b__1(<>f__AnonymousType0`2 x)
+   at System.Reactive.Linq.ObservableImpl.Select`2._.OnNext(TSource value)
+2016-08-20 11:37:29.5437|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 113 at GitClient.cs:195
+2016-08-20 11:37:29.5437|INFO|thread:21|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 113 at GitClient.cs:195 after waiting 8.02E-05s
+2016-08-20 11:37:29.5437|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 114 at RepositoryModel.cs:596
+2016-08-20 11:37:29.5437|INFO|thread:25|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 114 at RepositoryModel.cs:596 after waiting 0.0002864s
+2016-08-20 11:37:29.5757|INFO|thread:41|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 115 at GitClient.cs:267
+2016-08-20 11:37:29.5757|INFO|thread:41|AsyncReaderWriterLock|Released concurrent scheduler for operation: 114 at RepositoryModel.cs:596 after blocking 0.030046s
+2016-08-20 11:37:29.5757|INFO|thread:41|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 115 at GitClient.cs:267 after waiting 0.0010954s
+2016-08-20 11:37:29.5757|INFO|thread:26|AsyncReaderWriterLock|Released concurrent scheduler for operation: 113 at GitClient.cs:195 after blocking 0.0369315s
+2016-08-20 11:37:29.6043|INFO|thread:41|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 11:37:29.6043|INFO|thread:41|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 11:37:29.6043|INFO|thread:41|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'status --untracked-files=all --porcelain -z ', Working Directory: C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io\
+2016-08-20 11:37:29.8636|INFO|thread:25|ConcurrentRepositoryConnection|Took 225ms to git status
+2016-08-20 11:37:29.8636|INFO|thread:25|ConcurrentRepositoryConnection|Took 225ms to git status and parse output
+2016-08-20 11:37:29.9086|INFO|thread:25|NewCommitViewModel|Took 333ms to load files for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io
+2016-08-20 11:37:29.9086|INFO|thread:25|AsyncReaderWriterLock|Released concurrent scheduler for operation: 115 at GitClient.cs:267 after blocking 0.3318934s
+2016-08-20 11:37:29.9387|INFO|thread: 1|NewCommitViewModel|Took 30ms to render file list for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io
+2016-08-20 11:37:29.9387|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 116 at RepositoryViewModel.cs:319
+2016-08-20 11:37:29.9387|INFO|thread:38|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 116 at RepositoryViewModel.cs:319 after waiting 0.0001124s
+2016-08-20 11:37:29.9597|WARN|thread:26|GetBranch`1|Could not resolve branch origin/master
+2016-08-20 11:37:29.9597|INFO|thread:26|AsyncReaderWriterLock|Released concurrent scheduler for operation: 116 at RepositoryViewModel.cs:319 after blocking 0.020344s
+2016-08-20 11:38:07.9468|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 117 at GitClient.cs:195
+2016-08-20 11:38:07.9468|INFO|thread: 4|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 117 at GitClient.cs:195 after waiting 7.93E-05s
+2016-08-20 11:38:07.9468|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 118 at RepositoryModel.cs:596
+2016-08-20 11:38:07.9468|INFO|thread:34|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 118 at RepositoryModel.cs:596 after waiting 5.92E-05s
+2016-08-20 11:38:07.9859|INFO|thread:16|AsyncReaderWriterLock|Released concurrent scheduler for operation: 117 at GitClient.cs:195 after blocking 0.0390682s
+2016-08-20 11:38:07.9859|INFO|thread:26|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 119 at GitClient.cs:267
+2016-08-20 11:38:07.9859|INFO|thread:24|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 119 at GitClient.cs:267 after waiting 8.44E-05s
+2016-08-20 11:38:07.9859|INFO|thread:26|AsyncReaderWriterLock|Released concurrent scheduler for operation: 118 at RepositoryModel.cs:596 after blocking 0.0409633s
+2016-08-20 11:38:08.0199|INFO|thread:41|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 11:38:08.0199|INFO|thread:41|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 11:38:08.0199|INFO|thread:41|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'status --untracked-files=all --porcelain -z ', Working Directory: C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io\
+2016-08-20 11:38:08.2112|INFO|thread:25|ConcurrentRepositoryConnection|Took 163ms to git status
+2016-08-20 11:38:08.2112|INFO|thread:25|ConcurrentRepositoryConnection|Took 163ms to git status and parse output
+2016-08-20 11:38:08.2342|INFO|thread:25|NewCommitViewModel|Took 245ms to load files for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io
+2016-08-20 11:38:08.2342|INFO|thread:25|AsyncReaderWriterLock|Released concurrent scheduler for operation: 119 at GitClient.cs:267 after blocking 0.2451983s
+2016-08-20 11:38:08.2342|INFO|thread: 1|NewCommitViewModel|Took 3ms to render file list for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io
+2016-08-20 11:38:08.2342|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 120 at RepositoryViewModel.cs:319
+2016-08-20 11:38:08.2342|INFO|thread:34|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 120 at RepositoryViewModel.cs:319 after waiting 4.1E-05s
+2016-08-20 11:38:08.2342|WARN|thread:38|GetBranch`1|Could not resolve branch origin/master
+2016-08-20 11:38:08.2342|INFO|thread:38|AsyncReaderWriterLock|Released concurrent scheduler for operation: 120 at RepositoryViewModel.cs:319 after blocking 0.0063774s
+2016-08-20 11:38:11.1813|INFO|thread:34|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 121 at GitClient.cs:474
+2016-08-20 11:38:11.1813|INFO|thread:38|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 121 at GitClient.cs:474 after waiting 0.0001464s
+2016-08-20 11:38:11.2566|INFO|thread:16|AsyncReaderWriterLock|Released concurrent scheduler for operation: 121 at GitClient.cs:474 after blocking 0.0755688s
+2016-08-20 11:38:20.3980|WARN|thread: 1|StandardUserErrors|Showing user error Failed to create a new commit.
+System.ArgumentNullException: Failed Null Check on 'commitModel'
+Parameter name: commitModel
+   at GitHub.Helpers.Ensure.ArgumentNotNull(Object value, String name)
+   at GitHub.ViewModels.CommitViewModel..ctor(IRepositoryModel repository, ICommitModel commitModel, ICommittedFileForklift committedFileForklift, IAvatarProvider avatarProvider, IInlineTextProvider inlineTextProvider)
+   at GitHub.Helpers.CommitCreator.<>c__DisplayClass2.<CreateCommit>b__1(<>f__AnonymousType0`2 x)
+   at System.Reactive.Linq.ObservableImpl.Select`2._.OnNext(TSource value)
+2016-08-20 11:38:23.5633|INFO|thread: 1|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854\lib\7za.exe', Args: 'x -y "-oC:\Users\Johanna\AppData\Local\GitHub\4uescyqn.5xn.deleteme" "C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854\posh-git.7z"', Working Directory: 
+2016-08-20 11:38:23.6307|INFO|thread: 1|PortablePackageManager|Extracting posh-git.7z is (so far) successful
+2016-08-20 11:38:23.7160|INFO|thread:34|PortablePackageManager|Extracted package successfully: posh-git.7z
+2016-08-20 11:38:23.7319|INFO|thread: 1|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 11:38:23.7319|INFO|thread: 1|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854\NativeBinaries\x86;C:\Program Files\Dell\DW WLAN Card;;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\Skype\Phone\;;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 11:38:23.7319|INFO|thread: 1|ProcessWrapper|Starting: Process - FileName: 'C:\WINDOWS\System32\WindowsPowerShell\v1.0\Powershell.exe', Args: '-NoExit -ExecutionPolicy Unrestricted -File "C:\Users\Johanna\AppData\Local\GitHub\PoshGit_a2be688889e1b24632e83adccd9b2a44b91d655b\profile.example.ps1"', Working Directory: C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io
+2016-08-20 11:38:27.6980|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 122 at GitClient.cs:195
+2016-08-20 11:38:27.6980|INFO|thread:26|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 122 at GitClient.cs:195 after waiting 3.21E-05s
+2016-08-20 11:38:27.6980|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 123 at RepositoryModel.cs:596
+2016-08-20 11:38:27.6980|INFO|thread:16|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 123 at RepositoryModel.cs:596 after waiting 6.39E-05s
+2016-08-20 11:38:27.7115|INFO|thread:24|AsyncReaderWriterLock|Released concurrent scheduler for operation: 122 at GitClient.cs:195 after blocking 0.0138177s
+2016-08-20 11:38:27.7115|INFO|thread:21|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 124 at GitClient.cs:267
+2016-08-20 11:38:27.7115|INFO|thread:41|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 124 at GitClient.cs:267 after waiting 3.4E-05s
+2016-08-20 11:38:27.7115|INFO|thread:21|AsyncReaderWriterLock|Released concurrent scheduler for operation: 123 at RepositoryModel.cs:596 after blocking 0.0153969s
+2016-08-20 11:38:27.7276|INFO|thread:25|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 11:38:27.7276|INFO|thread:25|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 11:38:27.7276|INFO|thread:25|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'status --untracked-files=all --porcelain -z ', Working Directory: C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io\
+2016-08-20 11:38:27.8414|INFO|thread:24|ConcurrentRepositoryConnection|Took 100ms to git status
+2016-08-20 11:38:27.8414|INFO|thread:24|ConcurrentRepositoryConnection|Took 100ms to git status and parse output
+2016-08-20 11:38:27.8414|INFO|thread:24|NewCommitViewModel|Took 139ms to load files for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io
+2016-08-20 11:38:27.8414|INFO|thread:24|AsyncReaderWriterLock|Released concurrent scheduler for operation: 124 at GitClient.cs:267 after blocking 0.139471s
+2016-08-20 11:38:27.8634|INFO|thread:26|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 125 at GitClient.cs:474
+2016-08-20 11:38:27.8634|INFO|thread: 4|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 125 at GitClient.cs:474 after waiting 3.49E-05s
+2016-08-20 11:38:27.8634|INFO|thread: 1|NewCommitViewModel|Took 13ms to render file list for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io
+2016-08-20 11:38:27.8634|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 126 at RepositoryViewModel.cs:319
+2016-08-20 11:38:27.8634|INFO|thread:38|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 126 at RepositoryViewModel.cs:319 after waiting 5.5E-05s
+2016-08-20 11:38:27.8784|WARN|thread:41|GetBranch`1|Could not resolve branch origin/master
+2016-08-20 11:38:27.8784|INFO|thread:41|AsyncReaderWriterLock|Released concurrent scheduler for operation: 126 at RepositoryViewModel.cs:319 after blocking 0.012434s
+2016-08-20 11:38:27.8784|INFO|thread:16|AsyncReaderWriterLock|Released concurrent scheduler for operation: 125 at GitClient.cs:474 after blocking 0.0228357s
+2016-08-20 11:38:31.5677|INFO|thread:24|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 127 at GitClient.cs:474
+2016-08-20 11:38:31.5677|INFO|thread:26|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 127 at GitClient.cs:474 after waiting 7.93E-05s
+2016-08-20 11:38:31.6092|INFO|thread:25|AsyncReaderWriterLock|Released concurrent scheduler for operation: 127 at GitClient.cs:474 after blocking 0.040968s
+2016-08-20 11:38:38.0577|INFO|thread:16|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 128 at GitClient.cs:474
+2016-08-20 11:38:38.0577|INFO|thread:26|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 128 at GitClient.cs:474 after waiting 5.5E-05s
+2016-08-20 11:38:38.1053|INFO|thread:24|AsyncReaderWriterLock|Released concurrent scheduler for operation: 128 at GitClient.cs:474 after blocking 0.0474854s
+2016-08-20 11:38:46.9042|INFO|thread:25|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 129 at GitClient.cs:474
+2016-08-20 11:38:46.9042|INFO|thread:36|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 129 at GitClient.cs:474 after waiting 6.34E-05s
+2016-08-20 11:38:46.9897|INFO|thread:25|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 130 at GitClient.cs:244
+2016-08-20 11:38:46.9897|INFO|thread:34|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 130 at GitClient.cs:244 after waiting 0.0003088s
+2016-08-20 11:38:46.9897|INFO|thread:25|AsyncReaderWriterLock|Released concurrent scheduler for operation: 129 at GitClient.cs:474 after blocking 0.0866503s
+2016-08-20 11:38:47.1379|INFO|thread:24|AsyncReaderWriterLock|Released concurrent scheduler for operation: 130 at GitClient.cs:244 after blocking 0.1469803s
+2016-08-20 11:38:48.1370|INFO|thread:24|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 131 at GitClient.cs:474
+2016-08-20 11:38:48.1370|INFO|thread:25|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 131 at GitClient.cs:474 after waiting 7.97E-05s
+2016-08-20 11:38:48.2350|INFO|thread:24|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 132 at GitClient.cs:244
+2016-08-20 11:38:48.2350|INFO|thread:26|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 132 at GitClient.cs:244 after waiting 7.88E-05s
+2016-08-20 11:38:48.2350|INFO|thread:24|AsyncReaderWriterLock|Released concurrent scheduler for operation: 131 at GitClient.cs:474 after blocking 0.0985021s
+2016-08-20 11:38:48.3399|INFO|thread:34|AsyncReaderWriterLock|Released concurrent scheduler for operation: 132 at GitClient.cs:244 after blocking 0.1040524s
+2016-08-20 11:38:51.5557|INFO|thread:24|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 133 at GitClient.cs:474
+2016-08-20 11:38:51.5557|INFO|thread:26|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 133 at GitClient.cs:474 after waiting 8.86E-05s
+2016-08-20 11:38:51.6038|INFO|thread:24|AsyncReaderWriterLock|Released concurrent scheduler for operation: 133 at GitClient.cs:474 after blocking 0.0479375s
+2016-08-20 11:38:53.2977|INFO|thread:24|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 134 at GitClient.cs:474
+2016-08-20 11:38:53.2977|INFO|thread:16|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 134 at GitClient.cs:474 after waiting 0.0001059s
+2016-08-20 11:38:53.3608|INFO|thread:26|AsyncReaderWriterLock|Released concurrent scheduler for operation: 134 at GitClient.cs:474 after blocking 0.0622483s
+2016-08-20 11:38:54.1229|INFO|thread:25|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 135 at GitClient.cs:474
+2016-08-20 11:38:54.1229|INFO|thread:24|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 135 at GitClient.cs:474 after waiting 8.53E-05s
+2016-08-20 11:38:54.1791|INFO|thread:25|AsyncReaderWriterLock|Released concurrent scheduler for operation: 135 at GitClient.cs:474 after blocking 0.0556339s
+2016-08-20 11:38:56.5452|INFO|thread:38|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 136 at GitClient.cs:474
+2016-08-20 11:38:56.5452|INFO|thread:26|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 136 at GitClient.cs:474 after waiting 6.39E-05s
+2016-08-20 11:38:56.5927|INFO|thread:16|AsyncReaderWriterLock|Released concurrent scheduler for operation: 136 at GitClient.cs:474 after blocking 0.048007s
+2016-08-20 11:39:08.9750|INFO|thread: 1|DashboardViewModel|Received request to clone: 'https://github.com/JA812/JA812.github.io.git'
+2016-08-20 11:39:15.6254|INFO|thread: 1|RepositoryModel|Cloning repo https://github.com/JA812/JA812.github.io.git
+2016-08-20 11:39:15.6254|INFO|thread: 1|GitLfsSmudgeTail|Setting Git LFS smudge progress environment variable
+2016-08-20 11:39:15.6254|INFO|thread: 1|RepositoryModel|Cloning 'https://github.com/JA812/JA812.github.io.git' to 'JA812.github.io' in directory 'C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io
+2016-08-20 11:39:15.6524|INFO|thread: 1|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 11:39:15.6524|INFO|thread: 1|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 11:39:15.6524|INFO|thread: 1|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'clone --progress --recursive  --  "https://github.com/JA812/JA812.github.io.git" "JA812.github.io" ', Working Directory: C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io
+2016-08-20 11:39:15.7049|INFO|thread:14|DashboardViewModel|Selected repository 'JA812/JA812.github.io'
+2016-08-20 11:39:15.9426|INFO|thread:14|DashboardViewModel|Took 0ms to Create RepositoryViewModel for location C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io\JA812.github.io
+2016-08-20 11:39:16.1723|INFO|thread:25|BackgroundFetcher|Got a refresh period for JA812/JA812.github.io of 300 seconds
+2016-08-20 11:39:16.1723|INFO|thread:25|BackgroundFetcher|Added a delay for JA812/JA812.github.io of 19777 milliseconds
+2016-08-20 11:39:16.3639|INFO|thread:24|GitLfsSmudgeTail|Cleaning up Git LFS smudge progress environment variable
+2016-08-20 11:39:16.3790|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 137 at GitClient.cs:600
+2016-08-20 11:39:16.3790|INFO|thread:38|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 137 at GitClient.cs:600 after waiting 1.53E-05s
+2016-08-20 11:39:16.3790|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 138 at GitClient.cs:588
+2016-08-20 11:39:16.3790|INFO|thread:16|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 138 at GitClient.cs:588 after waiting 6.5E-06s
+2016-08-20 11:39:16.3790|INFO|thread: 1|DashboardViewModel|Selected repository 'JA812/JA812.github.io'
+2016-08-20 11:39:16.3790|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 139 at GitClient.cs:195
+2016-08-20 11:39:16.3790|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 140 at RepositoryModel.cs:596
+2016-08-20 11:39:16.3890|INFO|thread:16|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 139 at GitClient.cs:195 after waiting 0.0069713s
+2016-08-20 11:39:16.3890|INFO|thread:25|AsyncReaderWriterLock|Released concurrent scheduler for operation: 138 at GitClient.cs:588 after blocking 0.0092923s
+2016-08-20 11:39:16.3890|INFO|thread:25|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 140 at RepositoryModel.cs:596 after waiting 0.0067241s
+2016-08-20 11:39:16.3890|INFO|thread:24|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 141 at RepositoryViewModel.cs:319
+2016-08-20 11:39:16.3890|INFO|thread:24|AsyncReaderWriterLock|Released concurrent scheduler for operation: 137 at GitClient.cs:600 after blocking 0.0117911s
+2016-08-20 11:39:16.3890|INFO|thread:38|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 141 at RepositoryViewModel.cs:319 after waiting 8.3E-05s
+2016-08-20 11:39:16.4060|WARN|thread:24|GetBranch`1|Could not resolve branch origin/master
+2016-08-20 11:39:16.4060|INFO|thread:24|AsyncReaderWriterLock|Released concurrent scheduler for operation: 141 at RepositoryViewModel.cs:319 after blocking 0.0157043s
+2016-08-20 11:39:16.4060|INFO|thread:24|AsyncReaderWriterLock|Released concurrent scheduler for operation: 139 at GitClient.cs:195 after blocking 0.0268274s
+2016-08-20 11:39:16.4240|INFO|thread:38|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 142 at GitClient.cs:267
+2016-08-20 11:39:16.4240|INFO|thread:24|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 142 at GitClient.cs:267 after waiting 1.81E-05s
+2016-08-20 11:39:16.4240|INFO|thread:38|AsyncReaderWriterLock|Released concurrent scheduler for operation: 140 at RepositoryModel.cs:596 after blocking 0.0356047s
+2016-08-20 11:39:16.4380|INFO|thread:16|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 11:39:16.4380|INFO|thread:16|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 11:39:16.4380|INFO|thread:16|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'status --untracked-files=all --porcelain -z ', Working Directory: C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io\JA812.github.io\
+2016-08-20 11:39:16.5422|INFO|thread:16|ConcurrentRepositoryConnection|Took 91ms to git status
+2016-08-20 11:39:16.5422|INFO|thread:16|ConcurrentRepositoryConnection|Took 91ms to git status and parse output
+2016-08-20 11:39:16.5422|INFO|thread:16|NewCommitViewModel|Took 119ms to load files for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io\JA812.github.io
+2016-08-20 11:39:16.5422|INFO|thread:16|AsyncReaderWriterLock|Released concurrent scheduler for operation: 142 at GitClient.cs:267 after blocking 0.1192217s
+2016-08-20 11:39:16.5452|INFO|thread: 1|NewCommitViewModel|Took 1ms to render file list for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io\JA812.github.io
+2016-08-20 11:39:16.5452|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 143 at RepositoryViewModel.cs:319
+2016-08-20 11:39:16.5452|INFO|thread:25|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 143 at RepositoryViewModel.cs:319 after waiting 2.89E-05s
+2016-08-20 11:39:16.5452|WARN|thread:38|GetBranch`1|Could not resolve branch origin/master
+2016-08-20 11:39:16.5452|INFO|thread:38|AsyncReaderWriterLock|Released concurrent scheduler for operation: 143 at RepositoryViewModel.cs:319 after blocking 0.0086373s
+2016-08-20 11:39:17.0857|ERROR|thread:17|ComparisonGraph|JavaScript Alert from the comparison graph: http://github-app/: TypeError: Cannot read property 'selectCommit' of null
+2016-08-20 11:39:41.2260|INFO|thread: 1|DashboardViewModel|Received request to clone: 'https://github.com/JA812/JA812.github.io.git'
+2016-08-20 11:41:03.9627|INFO|thread: 1|DashboardViewModel|Received request to clone: 'https://github.com/JA812/JA812.github.io.git'
+2016-08-20 11:41:16.9034|INFO|thread: 1|RepositoryModel|Cloning repo https://github.com/JA812/JA812.github.io.git
+2016-08-20 11:41:16.9034|INFO|thread: 1|GitLfsSmudgeTail|Setting Git LFS smudge progress environment variable
+2016-08-20 11:41:16.9034|INFO|thread: 1|RepositoryModel|Cloning 'https://github.com/JA812/JA812.github.io.git' to 'JA812.github.io' in directory 'C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io\JA812.github.io
+2016-08-20 11:41:16.9214|INFO|thread: 1|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 11:41:16.9214|INFO|thread: 1|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 11:41:16.9214|INFO|thread: 1|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'clone --progress --recursive  --  "https://github.com/JA812/JA812.github.io.git" "JA812.github.io" ', Working Directory: C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io\JA812.github.io
+2016-08-20 11:41:17.3109|INFO|thread:14|DashboardViewModel|Selected repository 'JA812/JA812.github.io'
+2016-08-20 11:41:17.4994|INFO|thread:14|DashboardViewModel|Took 0ms to Create RepositoryViewModel for location C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io\JA812.github.io\JA812.github.io
+2016-08-20 11:41:18.1510|ERROR|thread:17|ComparisonGraph|JavaScript Alert from the comparison graph: http://github-app/: TypeError: Cannot read property 'selectCommit' of null
+2016-08-20 11:41:18.3810|INFO|thread:35|GitLfsSmudgeTail|Cleaning up Git LFS smudge progress environment variable
+2016-08-20 11:41:18.3810|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 144 at GitClient.cs:600
+2016-08-20 11:41:18.3810|INFO|thread:21|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 144 at GitClient.cs:600 after waiting 0.0001273s
+2016-08-20 11:41:18.3810|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 145 at GitClient.cs:588
+2016-08-20 11:41:18.3810|INFO|thread: 1|DashboardViewModel|Selected repository 'JA812/JA812.github.io'
+2016-08-20 11:41:18.3810|INFO|thread:16|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 145 at GitClient.cs:588 after waiting 0.0001875s
+2016-08-20 11:41:18.3875|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 146 at GitClient.cs:195
+2016-08-20 11:41:18.3875|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 147 at RepositoryModel.cs:596
+2016-08-20 11:41:18.3875|INFO|thread:29|AsyncReaderWriterLock|Released concurrent scheduler for operation: 145 at GitClient.cs:588 after blocking 0.0117929s
+2016-08-20 11:41:18.3875|INFO|thread:16|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 146 at GitClient.cs:195 after waiting 0.0098438s
+2016-08-20 11:41:18.3875|INFO|thread:24|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 147 at RepositoryModel.cs:596 after waiting 0.0094029s
+2016-08-20 11:41:18.3875|INFO|thread:35|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 148 at RepositoryViewModel.cs:319
+2016-08-20 11:41:18.3875|INFO|thread:36|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 148 at RepositoryViewModel.cs:319 after waiting 2.51E-05s
+2016-08-20 11:41:18.3875|INFO|thread:35|AsyncReaderWriterLock|Released concurrent scheduler for operation: 144 at GitClient.cs:600 after blocking 0.0131757s
+2016-08-20 11:41:18.4060|INFO|thread:39|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 149 at GitClient.cs:267
+2016-08-20 11:41:18.4060|INFO|thread:21|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 149 at GitClient.cs:267 after waiting 3.59E-05s
+2016-08-20 11:41:18.4060|INFO|thread:39|AsyncReaderWriterLock|Released concurrent scheduler for operation: 147 at RepositoryModel.cs:596 after blocking 0.0094855s
+2016-08-20 11:41:18.4060|INFO|thread:41|AsyncReaderWriterLock|Released concurrent scheduler for operation: 146 at GitClient.cs:195 after blocking 0.0098008s
+2016-08-20 11:41:18.4060|WARN|thread:29|GetBranch`1|Could not resolve branch origin/master
+2016-08-20 11:41:18.4060|INFO|thread:29|AsyncReaderWriterLock|Released concurrent scheduler for operation: 148 at RepositoryViewModel.cs:319 after blocking 0.0119782s
+2016-08-20 11:41:18.4220|INFO|thread:35|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 11:41:18.4220|INFO|thread:35|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 11:41:18.4220|INFO|thread:35|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'status --untracked-files=all --porcelain -z ', Working Directory: C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io\JA812.github.io\JA812.github.io\
+2016-08-20 11:41:18.5661|INFO|thread:50|ConcurrentRepositoryConnection|Took 127ms to git status
+2016-08-20 11:41:18.5661|INFO|thread:50|ConcurrentRepositoryConnection|Took 127ms to git status and parse output
+2016-08-20 11:41:18.5661|INFO|thread:50|NewCommitViewModel|Took 159ms to load files for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io\JA812.github.io\JA812.github.io
+2016-08-20 11:41:18.5661|INFO|thread:50|AsyncReaderWriterLock|Released concurrent scheduler for operation: 149 at GitClient.cs:267 after blocking 0.1598878s
+2016-08-20 11:41:18.5661|INFO|thread: 1|NewCommitViewModel|Took 1ms to render file list for C:\Users\Johanna\Desktop\frontend-nanodegree-mobile-portfolio-master\JA812.github.io\JA812.github.io\JA812.github.io
+2016-08-20 11:41:18.5661|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 150 at RepositoryViewModel.cs:319
+2016-08-20 11:41:18.5661|INFO|thread:21|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 150 at RepositoryViewModel.cs:319 after waiting 0.0015582s
+2016-08-20 11:41:18.5841|WARN|thread:50|GetBranch`1|Could not resolve branch origin/master
+2016-08-20 11:41:18.5841|INFO|thread:50|AsyncReaderWriterLock|Released concurrent scheduler for operation: 150 at RepositoryViewModel.cs:319 after blocking 0.0139516s
+2016-08-20 11:41:39.8026|INFO|thread: 1|RepositoryHost|Log in from cache for login 'JA812' to host 'https://api.github.com/' SUCCEEDED
+2016-08-20 11:41:39.8026|ERROR|thread: 1|BranchSynchronizer|Branch was not updated before refresh was called
+2016-08-20 11:42:41.8339|INFO|thread: 1|DashboardViewModel|Received request to clone: 'https://github.com/JA812/JA812.github.io.git'
+2016-08-20 11:42:50.2487|INFO|thread: 1|RepositoryModel|Cloning repo https://github.com/JA812/JA812.github.io.git
+2016-08-20 11:42:50.2487|INFO|thread: 1|GitLfsSmudgeTail|Setting Git LFS smudge progress environment variable
+2016-08-20 11:42:50.2487|INFO|thread: 1|RepositoryModel|Cloning 'https://github.com/JA812/JA812.github.io.git' to 'JA812.github.io' in directory 'C:\Users\Johanna\Desktop
+2016-08-20 11:42:50.2662|INFO|thread: 1|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 11:42:50.2662|INFO|thread: 1|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 11:42:50.2662|INFO|thread: 1|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'clone --progress --recursive  --  "https://github.com/JA812/JA812.github.io.git" "JA812.github.io" ', Working Directory: C:\Users\Johanna\Desktop
+2016-08-20 11:42:50.3065|INFO|thread:14|DashboardViewModel|Selected repository 'JA812/JA812.github.io'
+2016-08-20 11:42:50.5312|INFO|thread:14|DashboardViewModel|Took 0ms to Create RepositoryViewModel for location C:\Users\Johanna\Desktop\JA812.github.io
+2016-08-20 11:42:50.9801|INFO|thread:47|GitLfsSmudgeTail|Cleaning up Git LFS smudge progress environment variable
+2016-08-20 11:42:50.9841|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 151 at GitClient.cs:600
+2016-08-20 11:42:50.9841|INFO|thread:41|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 151 at GitClient.cs:600 after waiting 3.63E-05s
+2016-08-20 11:42:50.9841|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 152 at GitClient.cs:588
+2016-08-20 11:42:50.9841|INFO|thread: 1|DashboardViewModel|Selected repository 'JA812/JA812.github.io'
+2016-08-20 11:42:50.9841|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 153 at GitClient.cs:195
+2016-08-20 11:42:50.9841|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 154 at RepositoryModel.cs:596
+2016-08-20 11:42:50.9841|INFO|thread:47|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 152 at GitClient.cs:588 after waiting 0.0026503s
+2016-08-20 11:42:50.9841|INFO|thread:45|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 155 at RepositoryViewModel.cs:319
+2016-08-20 11:42:50.9841|INFO|thread:45|AsyncReaderWriterLock|Released concurrent scheduler for operation: 151 at GitClient.cs:600 after blocking 0.0113423s
+2016-08-20 11:42:50.9841|INFO|thread:41|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 153 at GitClient.cs:195 after waiting 0.0091748s
+2016-08-20 11:42:50.9841|INFO|thread:45|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 154 at RepositoryModel.cs:596 after waiting 0.0088538s
+2016-08-20 11:42:50.9976|INFO|thread:36|AsyncReaderWriterLock|Released concurrent scheduler for operation: 152 at GitClient.cs:588 after blocking 0.0106742s
+2016-08-20 11:42:50.9976|INFO|thread:47|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 155 at RepositoryViewModel.cs:319 after waiting 0.0022673s
+2016-08-20 11:42:51.0221|INFO|thread:36|AsyncReaderWriterLock|Released concurrent scheduler for operation: 153 at GitClient.cs:195 after blocking 0.0263249s
+2016-08-20 11:42:51.0221|WARN|thread:47|GetBranch`1|Could not resolve branch origin/master
+2016-08-20 11:42:51.0221|INFO|thread:47|AsyncReaderWriterLock|Released concurrent scheduler for operation: 155 at RepositoryViewModel.cs:319 after blocking 0.0287285s
+2016-08-20 11:42:51.0341|INFO|thread:41|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 156 at GitClient.cs:267
+2016-08-20 11:42:51.0341|INFO|thread:41|AsyncReaderWriterLock|Released concurrent scheduler for operation: 154 at RepositoryModel.cs:596 after blocking 0.0386227s
+2016-08-20 11:42:51.0341|INFO|thread:36|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 156 at GitClient.cs:267 after waiting 9.89E-05s
+2016-08-20 11:42:51.0511|INFO|thread:45|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 11:42:51.0511|INFO|thread:45|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 11:42:51.0511|INFO|thread:45|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'status --untracked-files=all --porcelain -z ', Working Directory: C:\Users\Johanna\Desktop\JA812.github.io\
+2016-08-20 11:42:51.1687|INFO|thread:45|ConcurrentRepositoryConnection|Took 97ms to git status
+2016-08-20 11:42:51.1687|INFO|thread:45|ConcurrentRepositoryConnection|Took 97ms to git status and parse output
+2016-08-20 11:42:51.1687|INFO|thread:45|NewCommitViewModel|Took 135ms to load files for C:\Users\Johanna\Desktop\JA812.github.io
+2016-08-20 11:42:51.1687|INFO|thread:45|AsyncReaderWriterLock|Released concurrent scheduler for operation: 156 at GitClient.cs:267 after blocking 0.1349797s
+2016-08-20 11:42:51.1687|INFO|thread: 1|NewCommitViewModel|Took 1ms to render file list for C:\Users\Johanna\Desktop\JA812.github.io
+2016-08-20 11:42:51.1687|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 157 at RepositoryViewModel.cs:319
+2016-08-20 11:42:51.1687|INFO|thread:47|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 157 at RepositoryViewModel.cs:319 after waiting 2.65E-05s
+2016-08-20 11:42:51.1687|WARN|thread:41|GetBranch`1|Could not resolve branch origin/master
+2016-08-20 11:42:51.1687|INFO|thread:41|AsyncReaderWriterLock|Released concurrent scheduler for operation: 157 at RepositoryViewModel.cs:319 after blocking 0.0119068s
+2016-08-20 11:42:51.2564|ERROR|thread:17|ComparisonGraph|JavaScript Alert from the comparison graph: http://github-app/: TypeError: Cannot read property 'selectCommit' of null
+2016-08-20 11:44:00.3676|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 158 at GitClient.cs:195
+2016-08-20 11:44:00.3676|INFO|thread:45|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 158 at GitClient.cs:195 after waiting 7.6E-05s
+2016-08-20 11:44:00.3676|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 159 at RepositoryModel.cs:596
+2016-08-20 11:44:00.3676|INFO|thread:36|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 159 at RepositoryModel.cs:596 after waiting 0.0003512s
+2016-08-20 11:44:00.4007|INFO|thread:52|AsyncReaderWriterLock|Released concurrent scheduler for operation: 158 at GitClient.cs:195 after blocking 0.0324687s
+2016-08-20 11:44:00.4186|INFO|thread:29|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 160 at GitClient.cs:267
+2016-08-20 11:44:00.4186|INFO|thread:52|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 160 at GitClient.cs:267 after waiting 5.83E-05s
+2016-08-20 11:44:00.4186|INFO|thread:29|AsyncReaderWriterLock|Released concurrent scheduler for operation: 159 at RepositoryModel.cs:596 after blocking 0.0501568s
+2016-08-20 11:44:00.4426|INFO|thread:36|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 11:44:00.4426|INFO|thread:36|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 11:44:00.4426|INFO|thread:36|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'status --untracked-files=all --porcelain -z ', Working Directory: C:\Users\Johanna\Desktop\JA812.github.io\
+2016-08-20 11:44:00.5814|INFO|thread:36|ConcurrentRepositoryConnection|Took 113ms to git status
+2016-08-20 11:44:00.5814|INFO|thread:36|ConcurrentRepositoryConnection|Took 114ms to git status and parse output
+2016-08-20 11:44:00.5814|INFO|thread:36|NewCommitViewModel|Took 163ms to load files for C:\Users\Johanna\Desktop\JA812.github.io
+2016-08-20 11:44:00.5814|INFO|thread:36|AsyncReaderWriterLock|Released concurrent scheduler for operation: 160 at GitClient.cs:267 after blocking 0.162925s
+2016-08-20 11:44:00.5814|INFO|thread: 1|NewCommitViewModel|Took 0ms to render file list for C:\Users\Johanna\Desktop\JA812.github.io
+2016-08-20 11:44:00.5814|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 161 at RepositoryViewModel.cs:319
+2016-08-20 11:44:00.5814|INFO|thread:45|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 161 at RepositoryViewModel.cs:319 after waiting 3.49E-05s
+2016-08-20 11:44:00.5944|WARN|thread:29|GetBranch`1|Could not resolve branch origin/master
+2016-08-20 11:44:00.5944|INFO|thread:29|AsyncReaderWriterLock|Released concurrent scheduler for operation: 161 at RepositoryViewModel.cs:319 after blocking 0.0113567s
+2016-08-20 11:44:07.4073|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 162 at GitClient.cs:195
+2016-08-20 11:44:07.4073|INFO|thread:41|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 162 at GitClient.cs:195 after waiting 5.73E-05s
+2016-08-20 11:44:07.4073|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 163 at RepositoryModel.cs:596
+2016-08-20 11:44:07.4073|INFO|thread:45|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 163 at RepositoryModel.cs:596 after waiting 0.00202s
+2016-08-20 11:44:07.4283|INFO|thread:52|AsyncReaderWriterLock|Released concurrent scheduler for operation: 162 at GitClient.cs:195 after blocking 0.0209831s
+2016-08-20 11:44:07.4358|INFO|thread:45|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 164 at GitClient.cs:267
+2016-08-20 11:44:07.4358|INFO|thread:29|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 164 at GitClient.cs:267 after waiting 5.08E-05s
+2016-08-20 11:44:07.4358|INFO|thread:45|AsyncReaderWriterLock|Released concurrent scheduler for operation: 163 at RepositoryModel.cs:596 after blocking 0.0256909s
+2016-08-20 11:44:07.4603|INFO|thread:36|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 11:44:07.4603|INFO|thread:36|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 11:44:07.4603|INFO|thread:36|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'status --untracked-files=all --porcelain -z ', Working Directory: C:\Users\Johanna\Desktop\JA812.github.io\
+2016-08-20 11:44:07.6490|INFO|thread:52|ConcurrentRepositoryConnection|Took 166ms to git status
+2016-08-20 11:44:07.6490|INFO|thread:52|ConcurrentRepositoryConnection|Took 167ms to git status and parse output
+2016-08-20 11:44:07.6675|INFO|thread:52|NewCommitViewModel|Took 232ms to load files for C:\Users\Johanna\Desktop\JA812.github.io
+2016-08-20 11:44:07.6675|INFO|thread:52|AsyncReaderWriterLock|Released concurrent scheduler for operation: 164 at GitClient.cs:267 after blocking 0.2320715s
+2016-08-20 11:44:07.6735|INFO|thread: 1|NewCommitViewModel|Took 6ms to render file list for C:\Users\Johanna\Desktop\JA812.github.io
+2016-08-20 11:44:07.6735|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 165 at RepositoryViewModel.cs:319
+2016-08-20 11:44:07.6735|INFO|thread:47|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 165 at RepositoryViewModel.cs:319 after waiting 4.38E-05s
+2016-08-20 11:44:07.6895|WARN|thread:50|GetBranch`1|Could not resolve branch origin/master
+2016-08-20 11:44:07.6895|INFO|thread:50|AsyncReaderWriterLock|Released concurrent scheduler for operation: 165 at RepositoryViewModel.cs:319 after blocking 0.0150386s
+2016-08-20 11:44:35.8361|INFO|thread:44|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 166 at GitClient.cs:195
+2016-08-20 11:44:35.8361|INFO|thread:29|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 166 at GitClient.cs:195 after waiting 5.17E-05s
+2016-08-20 11:44:35.8361|INFO|thread:44|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 167 at RepositoryModel.cs:596
+2016-08-20 11:44:35.8361|INFO|thread:52|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 167 at RepositoryModel.cs:596 after waiting 0.0001922s
+2016-08-20 11:44:35.8682|INFO|thread:36|AsyncReaderWriterLock|Released concurrent scheduler for operation: 166 at GitClient.cs:195 after blocking 0.0323577s
+2016-08-20 11:44:35.8682|INFO|thread:47|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 168 at GitClient.cs:267
+2016-08-20 11:44:35.8682|INFO|thread:41|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 168 at GitClient.cs:267 after waiting 5.22E-05s
+2016-08-20 11:44:35.8682|INFO|thread:47|AsyncReaderWriterLock|Released concurrent scheduler for operation: 167 at RepositoryModel.cs:596 after blocking 0.0321435s
+2016-08-20 11:44:35.8902|INFO|thread:36|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 11:44:35.8902|INFO|thread:36|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 11:44:35.8902|INFO|thread:36|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'status --untracked-files=all --porcelain -z ', Working Directory: C:\Users\Johanna\Desktop\JA812.github.io\
+2016-08-20 11:44:35.9659|INFO|thread:52|BackgroundFetcher|Got a refresh period for C:\Users\Johanna\Desktop\JA812.github.io\.git of 300 seconds
+2016-08-20 11:44:35.9659|INFO|thread:52|BackgroundFetcher|Added a delay for C:\Users\Johanna\Desktop\JA812.github.io\.git of 13374 milliseconds
+2016-08-20 11:44:36.0000|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 169 at GitClient.cs:600
+2016-08-20 11:44:36.0000|INFO|thread:50|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 169 at GitClient.cs:600 after waiting 4.94E-05s
+2016-08-20 11:44:36.0150|INFO|thread:52|AsyncReaderWriterLock|Released concurrent scheduler for operation: 169 at GitClient.cs:600 after blocking 0.014782s
+2016-08-20 11:44:36.0716|INFO|thread:45|ConcurrentRepositoryConnection|Took 151ms to git status
+2016-08-20 11:44:36.0716|INFO|thread:45|ConcurrentRepositoryConnection|Took 151ms to git status and parse output
+2016-08-20 11:44:36.0906|INFO|thread:45|NewCommitViewModel|Took 221ms to load files for C:\Users\Johanna\Desktop\JA812.github.io
+2016-08-20 11:44:36.0906|INFO|thread:45|AsyncReaderWriterLock|Released concurrent scheduler for operation: 168 at GitClient.cs:267 after blocking 0.2214775s
+2016-08-20 11:44:36.1522|INFO|thread: 1|NewCommitViewModel|Took 61ms to render file list for C:\Users\Johanna\Desktop\JA812.github.io
+2016-08-20 11:44:36.1552|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 170 at RepositoryViewModel.cs:319
+2016-08-20 11:44:36.1552|INFO|thread:29|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 170 at RepositoryViewModel.cs:319 after waiting 6.71E-05s
+2016-08-20 11:44:36.1752|WARN|thread:36|GetBranch`1|Could not resolve branch origin/master
+2016-08-20 11:44:36.1752|INFO|thread:36|AsyncReaderWriterLock|Released concurrent scheduler for operation: 170 at RepositoryViewModel.cs:319 after blocking 0.0209052s
+2016-08-20 11:44:36.2666|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 171 at GitClient.cs:195
+2016-08-20 11:44:36.2666|INFO|thread:45|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 171 at GitClient.cs:195 after waiting 5.36E-05s
+2016-08-20 11:44:36.2666|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 172 at RepositoryModel.cs:596
+2016-08-20 11:44:36.2666|INFO|thread:35|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 172 at RepositoryModel.cs:596 after waiting 2.75E-05s
+2016-08-20 11:44:36.2856|INFO|thread:47|AsyncReaderWriterLock|Released concurrent scheduler for operation: 171 at GitClient.cs:195 after blocking 0.0189649s
+2016-08-20 11:44:36.2856|INFO|thread:29|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 173 at GitClient.cs:267
+2016-08-20 11:44:36.2856|INFO|thread:29|AsyncReaderWriterLock|Released concurrent scheduler for operation: 172 at RepositoryModel.cs:596 after blocking 0.0196297s
+2016-08-20 11:44:36.2856|INFO|thread:29|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 173 at GitClient.cs:267 after waiting 0.0003261s
+2016-08-20 11:44:36.3171|INFO|thread:29|GitEnvironment|Process set up with this SSH Agent info: 10704:/tmp/ssh-KS2dba8JiKgM/agent.11360
+2016-08-20 11:44:36.3171|INFO|thread:29|GitEnvironment|PATH is C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\Johanna\AppData\Local\Apps\2.0\2YPPG8PG.TGX\N3OJCOXR.DRB\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\Johanna\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-08-20 11:44:36.3171|INFO|thread:29|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Johanna\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd\git.exe', Args: 'status --untracked-files=all --porcelain -z ', Working Directory: C:\Users\Johanna\Desktop\JA812.github.io\
+2016-08-20 11:44:36.4367|INFO|thread:44|ConcurrentRepositoryConnection|Took 99ms to git status
+2016-08-20 11:44:36.4367|INFO|thread:44|ConcurrentRepositoryConnection|Took 99ms to git status and parse output
+2016-08-20 11:44:36.4547|INFO|thread:44|NewCommitViewModel|Took 167ms to load files for C:\Users\Johanna\Desktop\JA812.github.io
+2016-08-20 11:44:36.4547|INFO|thread:44|AsyncReaderWriterLock|Released concurrent scheduler for operation: 173 at GitClient.cs:267 after blocking 0.1672026s
+2016-08-20 11:44:36.4547|INFO|thread: 1|NewCommitViewModel|Took 3ms to render file list for C:\Users\Johanna\Desktop\JA812.github.io
+2016-08-20 11:44:36.4547|INFO|thread: 1|AsyncReaderWriterLock|Acquiring concurrent scheduler for operation 174 at RepositoryViewModel.cs:319
+2016-08-20 11:44:36.4547|INFO|thread:29|AsyncReaderWriterLock|Acquired concurrent scheduler for operation: 174 at RepositoryViewModel.cs:319 after waiting 3.07E-05s
+2016-08-20 11:44:36.4677|WARN|thread:52|GetBranch`1|Could not resolve branch origin/master
+2016-08-20 11:44:36.4677|INFO|thread:52|AsyncReaderWriterLock|Released concurrent scheduler for operation: 174 at RepositoryViewModel.cs:319 after blocking 0.0086336s

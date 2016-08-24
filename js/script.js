@@ -60,7 +60,7 @@ function loadData() {
 
     //Wiki links
 
-    var wikiURL = 'http://en.wikipedia.org/w/api.php?action=opensearch&search=' + cityStr + '&format=json&callback=wikiCallback';
+    var wikiURL = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + cityStr + '&format=json&callback=wikiCallback';
 
     var wikiRequestTimeout = setTimeout(function() {
         $wikiElem.text("failed to get wikipedia resources");

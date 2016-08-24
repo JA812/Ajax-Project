@@ -11,6 +11,8 @@ function loadData() {
     $wikiElem.text("");
     $nytElem.text("");
 
+}
+
     // load streetview
 
 
@@ -53,7 +55,7 @@ function loadData() {
 
 
    //NYT error 
-}).fail(function(e)) {
+}).fail(function(e) {
       $nytHeaderElem.text('New York Times Articles Could Not Be Loaded');
     }); 
 
